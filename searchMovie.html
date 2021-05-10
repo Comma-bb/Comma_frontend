@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/search.js"></script>
+</head>
+<body>
+    <h1>영화 검색</h1>
+    <p th:text="${movieName}"></p>
+    <form method="post" action="/search">
+        <input type="text" name="name" th:value="${value}"/>
+        <input type="submit" value="검색"/>
+    </form>
+
+</body>
+</html>
