@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Netflix world – Watch TV Shows Online, Watch Movies Online</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Comma</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,12 +13,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"
         integrity="sha256-t2kyTgkh+fZJYRET5l9Sjrrl4UDain5jxdbqe8ejO8A=" crossorigin="anonymous" />
 
+    
+    <link rel="stylesheet" href="../assets/css/home.css">
     <!--for global styling-->
     <link rel="stylesheet" href="../assets/css/global.css">
     <!-- for footer and header-->
     <link rel="stylesheet" href="../assets/css/browse.css">
     <!--custom styling-->
     <link rel="stylesheet" href="../assets/css/userprofile.css">
+    
 
 </head>
 
@@ -33,7 +32,6 @@
 
 
     <!-- dashboard/browse page block start | home page after login | -->
-
     <main id="mainContainer" class="p-b-40">
 
         <header class="d-flex space-between flex-center flex-middle">
@@ -42,10 +40,6 @@
                     <a href="browse.html"><h2 class="logo logo-text red-color f-s-28 m-r-25"><img src="../images/logo_header.png" height="50px" width="170px" alt="site logo main"></img></h2></a>
                     <a href="browse.html"><h1 class="second-logo-text red-color f-s-28"><img src="../images/logo_header2.png" height="40px" width="40px" alt="site logo main"></h1></a>
                 </a>
-                <a href="browse.html" class="nav-item home">홈</a>
-                <a href="movies.html" class="nav-item">영화</a>
-                <a href="latest.html" class="nav-item latest">New 콘텐츠</a>
-                <a href="mylist.html" class="nav-item">내가 찜한 콘텐츠</a>
             </div>
             <div class="righticons d-flex flex-end flex-middle">
                 <a href="search.html">
@@ -116,174 +110,64 @@
         <section class="userprofile" id="userprofilecontainer">
             <div>
                 <h2 class="heading f-s-40">
-                    Account
                 </h2>
             </div>
-            <div class="line"></div>
-            <div class="membership d-flex flex-no-wrap space-between">
-                <div class="left">
-                    <h4 class="headline">
-                        MEMBERSHIP & BILLING
-                    </h4>
-                    <button class="button">Cancel Membership</button>
-                </div>
-                <div class="right">
-                    <div class="d-flex space-between">
-                        <div class="email">
-                            <strong>rajesh1234@gmail.com</strong>
-                        </div>
-                        <div class="link">
-                            <a href="#" class="link-item">
-                                Change account email
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="d-flex space-between">
-                        <div class="password">
-                            Password: *********
-                        </div>
-                        <div class="link">
-                            <a href="#" class="link-item">
-                                Change password
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="d-flex space-between">
-                        <div class="email">
-                            Phone: 095210 21826
-                        </div>
-                        <div class="link">
-                            <a href="#" class="link-item">
-                                Change phone number
-                            </a>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-
-                    <div class="carddetail d-flex space-between flex-middle">
-                        <div class="card">
-                            <h4><span class="icon-visa">VISA</span> •••• •••• •••• 5350</h4>
-                        </div>
-                        <div class="link">
-                            <a href="#" class="link-item">
-                                Update payment info
-                            </a>
-                            <a href="#" class="link-item">
-                                Biling detials
-                            </a>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-
-                    <div class="gift-card d-flex direction-column">
-                        <a href="#" class="link-item">
-                            Redeem gift card or promo code
-                        </a>
-                        <a href="#" class="link-item">
-                            Where to buy gift cards
-                        </a>
-                    </div>
-                </div>  
-            </div>
-            <div class="line"></div>
-
-            <!--plan details-->
-            <div class=" plan-details d-flex flex-middle space-between">
-                <div class="left">
-                    <h4 class="headline">PLAN DETAILS</h4>
-                </div>
-                <div class="right d-flex space-between">
-                    <p>Mobile</p>
-                    <a href="#" class="link-item">Change plan</a>
-                </div>
-            </div>
-            <div class="line"></div>
-
-            <!--settings-->
-            <div class="settings d-flex ">
-                <div class="left">
-                    <h4 class="headline">SETTINGS</h4>
-                </div>
-                <div class="right d-flex direction-column">
-                    <a href="#" class="link-item">Test participation</a>
-                    <a href="#" class="link-item">Manage download devices</a>
-                    <a href="#" class="link-item">Activate a device</a>
-                    <a href="#" class="link-item">Recent device streaming activity</a>
-                    <a href="#" class="link-item">Sign out of all devices</a>
-                    <a href="#" class="link-item">Download your personal information</a>
-                </div>
-            </div>
-            <div class="line"></div>
-
-            <!--parental control-->
-
-            <div class="parental-control d-flex">
-                <div class="left">
-                    <h4 class="headline">PROFILE & PARENTAL CONTROLS</h4>
-                </div>
-                <div class="right">
-                    <div class="">
-                        <div class="info-container d-flex flex-middle space-between">
-                            <div class="name d-flex">
-                                <img src="../images/icons/user1.png" alt="user" class="user-icon" />
-                                <div class="content">
-                                    <p class="username">Rajesh</p>
-                                    <p class="maturity">All Maturity Rating</p>
-                                </div>
-                            </div>
-    
-                            <div class="righticon">
-                                <svg class="chevron-down" viewBox="0 0 18 18">
-                                    <path fill="#aaa" d="M11.56 5.56L10.5 4.5 6 9l4.5 4.5 1.06-1.06L8.12 9z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-
-                    <div class="">
-                        <div class="info-container d-flex flex-middle space-between">
-                            <div class="name d-flex">
-                                <img src="../images/icons/user2.png" alt="user" class="user-icon" />
-                                <div class="content">
-                                    <p class="username">Rajesh</p>
-                                    <p class="maturity">All Maturity Rating</p>
-                                </div>
-                            </div>
-    
-                            <div class="righticon">
-                                <svg class="chevron-down" viewBox="0 0 18 18">
-                                    <path fill="#aaa" d="M11.56 5.56L10.5 4.5 6 9l4.5 4.5 1.06-1.06L8.12 9z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="line"></div>
-                    </div>
-
-                    <div class="">
-                        <div class="info-container d-flex flex-middle space-between">
-                            <div class="name d-flex">
-                                <img src="../images/icons/user3.png" alt="user" class="user-icon" />
-                                <div class="content">
-                                    <p class="username">Rajesh</p>
-                                    <p class="maturity">All Maturity Rating</p>
-                                </div>
-                            </div>
-    
-                            <div class="righticon">
-                                <svg class="chevron-down" viewBox="0 0 18 18">
-                                    <path fill="#aaa" d="M11.56 5.56L10.5 4.5 6 9l4.5 4.5 1.06-1.06L8.12 9z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="line"></div>
+            <div>
+                <h4 class="headline" style="text-align: center;">
+                        color of movie and ...
+                </h4>
+                <div class="section">
+                    <input type="radio" name="slide" id="slide01" checked>
+                    <input type="radio" name="slide" id="slide02">
+                    <input type="radio" name="slide" id="slide03">
+                    <div class="slide-wrap">
+                        <ul class="slidelist">
+                            <li>
+                                <a>
+                                    <label for="slide03" class="left"></label>
+                                    <div class="textbox">
+                                        <h3>1</h3>
+                                        <p>첫번째 슬라이드 입니다.</p>
+                                    </div>
+                                    <img src="../images/icons/slide.jpg">
+                                    <label for="slide02" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide01" class="left"></label>
+                                    <div class="textbox">
+                                        <h3>2</h3>
+                                        <p>두번째 슬라이드 입니다.</p>
+                                    </div>
+                                    <img src="../images/icons/slide.jpg">
+                                    <label for="slide03" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide02" class="left"></label>
+                                    <div class="textbox">
+                                        <h3>3</h3>
+                                        <p>세번째 슬라이드 입니다.</p>
+                                    </div>
+                                    <img src="../images/icons/slide.jpg">
+                                    <label for="slide01" class="right"></label>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 
-                
+                    
+                </div>
             </div>
+                
+                
+
+                  
+
         </section>
 
         <!--footer section and footer fixed menu mobile-->
@@ -344,10 +228,6 @@
         <a href="latest.html" class="nav-item">
             <i class="fa fa-film" aria-hidden="true"></i></br>
             Latest
-        </a>
-        <a href="user-profile/home.html" class="nav-item active">
-            <i class="fa fa-user" aria-hidden="true"></i></br>
-            Account
         </a>
     </div>
 
