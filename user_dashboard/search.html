@@ -19,7 +19,7 @@
     <!--main script file-->
     <script src="../assets/js/main-script.js"></script>
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha256-t2kyTgkh+fZJYRET5l9Sjrrl4UDain5jxdbqe8ejO8A=" crossorigin="anonymous" />
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/browse.css">
 
@@ -58,7 +58,9 @@
             <header class="d-flex space-between flex-center flex-middle">
                 <div class="nav-links d-flex flex-center flex-middle">
                     <a href="/">
+                        <!-- 웹 일때 로고-->
                         <a href="browse.html"><h2 class="logo logo-text red-color f-s-28 m-r-25"><img src="../images/logo_header.png" height="50px" width="170px" alt="site logo main"></img></h2></a>
+                        <!-- 모바일일때 로고  -->
                         <a href="browse.html"><h1 class="second-logo-text red-color f-s-28"><img src="../images/logo_header2.png" height="40px" width="40px" alt="site logo main"></h1></a>
                     </a>
                     <a href="browse.html" class="nav-item home">홈</a>
@@ -127,58 +129,83 @@
 
 
             <!--paretn div with black bg after main hero section-->
-            <div class="searchform d-flex flex-center flex-middle" style="padding-top: 150px;">
+            <div class="searchform d-flex flex-center flex-middle" style="padding-top: 100px;">
                 <form>
                     <input type="text" name="search" placeholder="Search.." autocomplete="off">
-                  </form>
+                </form>
             </div>
-            <div class="searchresult">
-                
-            </div>
+            <br>
+            <section id="mylist" class="container p-t-40" style="padding-top: 10px;">
+                <h4 class="romantic-heading">
+                    <!-- 검색 해보세요! -->
+                </h4>
+                <div class="my-list-page-container d-flex flex-start flex-middle">
+                    <a href="#">
+                        <img src="../images/movies/horrible-bosses-middle-poster.webp" alt=""
+                        class="mylist_img p-r-10 p-l-10 image-size item">
+                        <div class="color_form" style="width: auto; height: 10px; margin-bottom: 10px; max-width: 94%;">
+                            <div class="color" style="background: #2E9AFE;"></div>
+                            <div class="color" style="background: #FA5858;"></div>
+                            <div class="color" style="background: #81f781;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="../images/movies/kabir-singh-poster.webp" alt=""
+                        class="mylist_img p-r-10 p-l-10 image-size item">
+                        <div class="color_form" style="width: auto; height: 10px; margin-bottom: 10px; max-width: 94%;">
+                            <div class="color" style="background: #2E9AFE;"></div>
+                            <div class="color" style="background: #FA5858;"></div>
+                            <div class="color" style="background: #81f781;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="../images/movies/extraction-poster.jpg" alt=""
+                        class="mylist_img p-r-10 p-l-10 image-size item">
+                        <div class="color_form" style="width: auto; height: 10px; margin-bottom: 10px; max-width: 94%;">
+                            <div class="color" style="background: #2E9AFE;"></div>
+                            <div class="color" style="background: #FA5858;"></div>
+                            <div class="color" style="background: #81f781;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="../images/tv-show/poster/never-have-ever-short poster.jpg" alt=""
+                        class="mylist_img p-r-10 p-l-10 image-size item">
+                        <div class="color_form" style="width: auto; height: 10px; margin-bottom: 10px; max-width: 94%;">
+                            <div class="color" style="background: #2E9AFE;"></div>
+                            <div class="color" style="background: #FA5858;"></div>
+                            <div class="color" style="background: #81f781;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="../images/movies/we-are-the-milers-poster-little.webp" alt=""
+                        class="mylist_img p-r-10 p-l-10 image-size item">
+                        <div class="color_form" style="width: auto; height: 10px; margin-bottom: 10px; max-width: 94%;">
+                            <div class="color" style="background: #2E9AFE;"></div>
+                            <div class="color" style="background: #FA5858;"></div>
+                            <div class="color" style="background: #81f781;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="../images/movies/kabir-singh-poster.webp" alt=""
+                        class="mylist_img p-r-10 p-l-10 image-size item">
+                        <div class="color_form" style="width: auto; height: 10px; margin-bottom: 10px; max-width: 94%;">
+                            <div class="color" style="background: #2E9AFE;"></div>
+                            <div class="color" style="background: #FA5858;"></div>
+                            <div class="color" style="background: #81f781;"></div>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </div>
-
         <footer class="mainfooter d-flex direction-column space-between" id=" footer">
             <div class="container footer-container flex-start">
-                <div class="widgets d-flex space-between">
-                    <div class="first-widget">
-                        <ul>
-                            <li class="list-item">Audio and Subtitles</li>
-                            <li class="list-item">Media Center</li>
-                            <li class="list-item">Privacy</li>
-                            <li class="list-item">Contact us</li>
-                        </ul>
-                    </div>
-                    <div class="second-widget">
-                        <ul>
-                            <li class="list-item">Help Center</li>
-                            <li class="list-item">Cookie</li>
-                            <li class="list-item">Jobs</li>
-                        </ul>
-                    </div>
-                    <div class="third-widget">
-                        <ul>
-                            <li class="list-item">Audio Description</li>
-                            <li class="list-item">Investor Relations</li>
-                            <li class="list-item">Legal Notice</li>
-                        </ul>
-                    </div>
-                    <div class="forth-widget">
-                        <ul>
-                            <li class="list-item">Gift Card</li>
-                            <li class="list-item">Term Of Use</li>
-                            <li class="list-item">Corporate Information</li>
-                        </ul>
-                    </div>
-                </div>
-                <button class="button service">Service Code</button>
                 <p class="copyright">@copyright 2020 Comma, Inc.</p>
             </div>
-
-
+            <br>
         </footer>
-        </div>
     </main>
 
+    <!-- 밑에 버튼  -->
     <div class="footer-navigation d-flex space-between">
         <a href="browse.html" class="nav-item">
             <i class="fa fa-home" aria-hidden="true"></i> </br>
@@ -187,10 +214,6 @@
         <a href="search.html" class="nav-item active">
             <i class="fa fa-search" aria-hidden="true"></i></br>
             Search
-        </a>
-        <a href="latest.html" class="nav-item">
-            <i class="fa fa-film" aria-hidden="true"></i></br>
-            Latest
         </a>
         <a href="home.html" class="nav-item">
             <i class="fa fa-user" aria-hidden="true"></i></br>

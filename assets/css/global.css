@@ -67,6 +67,21 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+
+.mylist_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.color_form{
+    display: flex;
+    margin:0 auto;
+}
+.color{
+    flex: 1;
+}
+
 .d-flex{
     display: flex;
     flex-wrap: wrap;
