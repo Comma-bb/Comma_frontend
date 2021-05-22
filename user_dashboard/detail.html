@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Netflix world – Watch TV Shows Online, Watch Movies Online</title>
+    <title>Detail</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,21 +20,9 @@
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/browse.css">
     <link rel="stylesheet" href="../assets/css/single.css">
-
-    <!--html 5 video player-->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
-    <script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
-
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-
-    <!-- dashboard/browse page block start | home page after login | -->
-
     <main id="mainContainer" class="p-b-40">
 
         <header class="d-flex space-between flex-center flex-middle">
@@ -43,10 +31,6 @@
                     <a href="browse.html"><h2 class="logo logo-text red-color f-s-28 m-r-25"><img src="../images/logo_header.png" height="50px" width="170px" alt="site logo main"></img></h2></a>
                     <a href="browse.html"><h1 class="second-logo-text red-color f-s-28"><img src="../images/logo_header2.png" height="40px" width="40px" alt="site logo main"></h1></a>
                 </a>
-                <a href="browse.html" class="nav-item home">홈</a>
-                <a href="movies.html" class="nav-item">영화</a>
-                <a href="latest.html" class="nav-item latest">New 콘텐츠</a>
-                <a href="mylist.html" class="nav-item">내가 찜한 콘텐츠</a>
             </div>
             <div class="righticons d-flex flex-end flex-middle">
                 <a href="search.html"><img src="../images/icons/search.svg" alt="search icon"></a>
@@ -73,7 +57,6 @@
                     </div>
                 <div class="dropdown">
                     <img src="../images/icons/user-image-green.png" alt="user profile icon" class="user-icon"> <span class="profile-arrow"></span>
-
                     <div class="dropdown-content">
                         <div class="profile-links">
                             <a href="#" class="profile-item d-flex flex-middle">
@@ -100,70 +83,49 @@
                             <a href="#">Help Center</a>
                             <a href="/">Sign Out of Netflix</a>
                         </div>
-                        
                     </div>
                 </div>
                 
             </div>
         </header>
 
-        <!-- hero section video-->
-        <div class="videocontainer">
-            <video controls crossorigin playsinline
-                poster="../images/movies/murder mystery.jpg" id="player">
-                <!-- Video files -->
-                <source src="../images/movies/videos/Murder Mystery - Trailer - Netflix.mp4" type="video/mp4"
-                    >
-
-                <!-- Caption files -->
-                <track kind="captions" label="English" srclang="en"
-                    src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default>
-            </video>
-        </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
-                const player = new Plyr('#player');
-
-                // Expose
-                window.player = player;
-
-                // Bind event listener
-                function on(selector, type, callback) {
-                    document.querySelector(selector).addEventListener(type, callback, false);
-                }
-            });
-        </script>
-
-
+        <!-- 포스터랑 색깔 -->
         <section class="movieinformation container">
             <div class="movielogo">
-                <img src="../images/movies/murder mystery logo.webp" alt="">
+                <h1 style="text-align: center; font-size: xx-large;">늑대소년</h1>
             </div>
+            <div class="movie-poster" style="margin-bottom: 10px;">
+                <div class="left"><img src="../images/movies/wolfboy.jpeg" alt="" style="width: 100%; height: auto;"></div>
+                <div class="right" style="height: auto;">
+                    <div class="color_pallete" style="background: #3f322c;"></div>
+                    <div class="color_pallete" style="background: #2a2017;"></div>
+                    <div class="color_pallete" style="background: #dedcc7;"></div>
+                    <div class="color_pallete" style="background: #d0c1ac;"></div>
+                    <div class="color_pallete" style="background: #7b6857;"></div>
+                    <div class="color_pallete" style="background: #5a362a;"></div>
+                </div>
+            </div>
+            <br>
+            <!-- 정보 -->
             <div class="movierelease">
                 <span class="year">
-                    2019
-                </span>
-                <span class="rating">
-                    PG-13
+                    2012.10.31
                 </span>
                 <span class="timeduration">
-                    3h 7m
+                    125분
                 </span>
             </div>
             <div class="description">
-                A New York cop and his wife go on a European vacation to reinvigorate the spark in their marriage. A
-                chance encounter leads to them being framed for the murder of an elderly billionaire.
-            </div>
+                체온 46도, 혈액형 판독불가…
+                세상에 없어야 할 위험한 존재 늑대소년, 운명적 사랑에 빠지다!
+                요양 차 가족들과 한적한 마을로 이사 간 소녀는 어둠 속에 몸을 숨긴 의문의 늑대소년을 발견한다. 야생의 눈빛으로 사람 같지 않은 행동을 보이는 소년에게 왠지 마음이 쓰이는 소녀는 먹을 것을 보고 기다리는 법, 옷 입는 법, 글을 읽고 쓰는 법 등 소년에게 세상에서 살아가는 방법들을 하나씩 가르쳐준다. 태어나 처음으로 자신을 향해 손을 내밀어준 소녀에게 애틋한 감정이 싹트는 소년.
+                그러던 어느 날 예기치 못한 위기 속에 소년의 숨겨져 있던 위험한 본성이 드러나고, 소년은 순식간에 마을 사람들에게 두려움과 공포의 대상이 되어버리는데……
             <div class="castinformation">
-                <p><span class="name">Director:</span> Kyle Newacheck</p>
-                <p><span class="name">Screenplay:</span> James Vanderbilt</p>
-                <p><span class="name">Producers:</span> Adam Sandler, James Vanderbilt, Allen Covert, James D. Stern,
-                    Tripp Vinson, A.J. Dix</p>
-                <p><span class="name">Awards:</span> People's Choice Award for Favorite Comedic Movie</p>
+                <p><span class="name">감독:</span> 조성희</p>
+                <p><span class="name">출연:</span> 송중기, 박보영</p>
+                <p><span class="name">장르:</span> 멜로/로맨스, 드라마, 판타지</p>
             </div>
-            <div class="actions d-flex flex-start flex-middle">
+            <!-- <div class="actions d-flex flex-start flex-middle">
                 <a href="#" class="link-item">
                     <i class="fa fa-plus"></i></br>
                     My List
@@ -180,12 +142,9 @@
                     <i class="fa fa-download"></i></br>
                     Download
                 </a>
-            </div>
+            </div> -->
         </section>
-
-
-
-
+        <
         <!--Hollywood Action movies-->
         <section id="similar" class="container p-t-40">
             <h4 class="romantic-heading">
@@ -212,68 +171,16 @@
 
             </div>
         </section>
-
-        </div>
-
-
-        <!--footer section and footer fixed menu mobile-->
-
-        <footer class="mainfooter d-flex direction-column space-between" id=" footer">
-            <div class="container footer-container flex-start">
-                <div class="widgets d-flex space-between">
-                    <div class="first-widget">
-                        <ul>
-                            <li class="list-item">Audio and Subtitles</li>
-                            <li class="list-item">Media Center</li>
-                            <li class="list-item">Privacy</li>
-                            <li class="list-item">Contact us</li>
-                        </ul>
-                    </div>
-                    <div class="second-widget">
-                        <ul>
-                            <li class="list-item">Help Center</li>
-                            <li class="list-item">Cookie</li>
-                            <li class="list-item">Jobs</li>
-                        </ul>
-                    </div>
-                    <div class="third-widget">
-                        <ul>
-                            <li class="list-item">Audio Description</li>
-                            <li class="list-item">Investor Relations</li>
-                            <li class="list-item">Legal Notice</li>
-                        </ul>
-                    </div>
-                    <div class="forth-widget">
-                        <ul>
-                            <li class="list-item">Gift Card</li>
-                            <li class="list-item">Term Of Use</li>
-                            <li class="list-item">Corporate Information</li>
-                        </ul>
-                    </div>
-                </div>
-                <button class="button service">Service Code</button>
-                <p class="copyright">@copyright 2021 Comma, Inc.</p>
-            </div>
-
-
-        </footer>
-        </div>
-
-
     </main>
-
+    <!-- 밑에 버튼  -->
     <div class="footer-navigation d-flex space-between">
-        <a href="browse.html" class="nav-item active">
+        <a href="browse.html" class="nav-item">
             <i class="fa fa-home" aria-hidden="true"></i> </br>
-            <span>Home</span>
+            Home
         </a>
-        <a href="search.html" class="nav-item">
+        <a href="search.html" class="nav-item active">
             <i class="fa fa-search" aria-hidden="true"></i></br>
             Search
-        </a>
-        <a href="latest.html" class="nav-item">
-            <i class="fa fa-film" aria-hidden="true"></i></br>
-            Latest
         </a>
         <a href="home.html" class="nav-item">
             <i class="fa fa-user" aria-hidden="true"></i></br>

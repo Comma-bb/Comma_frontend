@@ -2,23 +2,44 @@ header{
     position: relative;
     background-color: black;
 }
-.videocontainer{
-    max-width: 1280px;
-    margin: auto !important;
+.movie-poster{
+    width: 100%;
+    height: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
-video{
-    object-fit: fill;
+
+.left{
+    width: 55%;
+    float: left;
+}
+.right{
+    width: 45%;
+    float: right;
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+.color_pallete{
+    float: right;
+    width: 23%;
+    padding-bottom: 23%;
+    margin-bottom: 20px;    
+    margin-right: 3%;
+    position:relative;
+    right: 10px;
 }
 
 .movieinformation{
-    max-width: 800px;
+    max-width: 1800px;
 }
 .movierelease span{
     padding: 10px;
 }
 .description{
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 100;
     color: rgba(255, 255, 255, 0.89);
 }
 .castinformation{
