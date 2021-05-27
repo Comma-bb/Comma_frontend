@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
-*{margin:20;padding:0.7px;}
+*{margin:20;padding:0}
 .section {}
 	.section input[id*="slide"] {display:none;}
 
