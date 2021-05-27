@@ -3,21 +3,21 @@ $(document).ready(function () {
 
     //autoplay hero section video 
 
-    setTimeout(function () {
-        document.getElementById("hero-video").play();
-    }, 5000);
+    // setTimeout(function () {
+    //     document.getElementById("hero-video").play();
+    // }, 5000);
 
     //onscroll change header color 
-    $(window).on("scroll", function() {
-        if($(window).scrollTop() > 100) {
-            $("header").css("background-color", "black");
-            document.getElementById("hero-video").pause();
-        } else if($(window).scrollTop() < 10) {
-            //remove the background property so it comes transparent again (defined in your css)
-            $("header").css("background-color", "transparent");
-            document.getElementById("hero-video").play();
-        }
-    });
+    // $(window).on("scroll", function() {
+    //     if($(window).scrollTop() > 100) {
+    //         $("header").css("background-color", "black");
+    //         document.getElementById("hero-video").pause();
+    //     } else if($(window).scrollTop() < 10) {
+    //         //remove the background property so it comes transparent again (defined in your css)
+    //         $("header").css("background-color", "transparent");
+    //         document.getElementById("hero-video").play();
+    //     }
+    // });
 
     //owl carousel settings
 
