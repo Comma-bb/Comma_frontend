@@ -58,7 +58,7 @@ body::before{
     top: 0;
     z-index: -1;
     position: fixed;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.9) 100%),url('../../images/netflix\ clone\ home\ page\ background\ image\ multiple\ shows\ collage.jpg');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.9) 100%),url('images/netflix\ clone\ home\ page\ background\ image\ multiple\ shows\ collage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
