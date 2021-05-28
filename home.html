@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="css/browse.css">
     <link rel="stylesheet" href="css/userprofile.css">
     
-    <script src="js/jquery-2.1.0.min.js"></script>
-
+    <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 </head>
 
 <body>
@@ -48,6 +47,8 @@
             </div>
 
             <div style="background-color: black;">
+                <h3 style="color:aqua">여기!</h3>
+                <div id="title" style="color:aqua"></div>
                 <h4 class="headline" style="text-align: center;font-family: 'Montserrat',sans-serif; color: whitesmoke;">
                        Color of my movie <br>and ...🌈🌞
                 </h4><br><br><br>
@@ -159,7 +160,29 @@
             About
         </a>
     </div>
-
+    <script type="text/javascript">
+        $.ajax({
+            url: "data.xml",
+            dataType: "xml",
+            beforeSend: function(x){
+                if(x && x.overrideMimeType){
+                    x.overrideMimeType("application/xml;charset=UTF-8");
+                }
+            },
+            success: function(data) {
+                document.getElementById("title").innerHTML = $(data).find("movie").find("title").text();
+                $(data).find("movie").each(function(){
+                    console.log("gkd");
+                    var title = $(this).find("title").text();
+                    document.getElementById("title").innerHTML = title;
+                });
+                
+            },
+            error: function(request, error){
+                console.log("code: "+request.state+"msg: "+request.responseText+"error: "+error);
+            }
+        });
+    </script>
 
 </body>
 
