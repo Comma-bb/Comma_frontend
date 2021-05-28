@@ -163,7 +163,7 @@
     <script type="text/javascript">
         $.ajax({
             url: "data.xml",
-            dataType: "xml",
+            dataType: "text",
             beforeSend: function(x){
                 if(x && x.overrideMimeType){
                     x.overrideMimeType("application/xml;charset=UTF-8");
@@ -172,7 +172,6 @@
             success: function(data) {
                 document.getElementById("title").innerHTML = $(data).find("movie").find("title").text();
                 $(data).find("movie").each(function(){
-                    console.log("gkd");
                     var title = $(this).find("title").text();
                     document.getElementById("title").innerHTML = title;
                 });
