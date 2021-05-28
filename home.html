@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="css/browse.css">
     <link rel="stylesheet" href="css/userprofile.css">
     
-    <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="js/jquery-2.1.0.min.js"></script>
+
 </head>
 
 <body>
@@ -29,7 +30,7 @@
                 <a href="/">
                     <a href="/">
                         <a href="browse.html"><h2 class="logo logo-text red-color f-s-28 m-r-25"><img src="images/icons/logo_header.PNG" height="50px" width="170px" alt="site logo main"></img></h2></a>
-                        <a href="browse.html"><h1 class="second-logo-text red-color f-s-28"><img src="images/icons/logo_header2.PNG" height="40px" width="40px" alt="site logo main"></h1></a>
+                        <a href="intro.html"><h1 class="second-logo-text red-color f-s-28"><img src="images/icons/logo_header2.PNG" height="40px" width="40px" alt="site logo main"></h1></a>
                     </a>
                 </a>
             </div>
@@ -47,8 +48,6 @@
             </div>
 
             <div style="background-color: black;">
-                <h3 style="color:aqua">여기!</h3>
-                <div id="title" style="color:aqua"></div>
                 <h4 class="headline" style="text-align: center;font-family: 'Montserrat',sans-serif; color: whitesmoke;">
                        Color of my movie <br>and ...🌈🌞
                 </h4><br><br><br>
@@ -160,28 +159,7 @@
             About
         </a>
     </div>
-    <script type="text/javascript">
-        $.ajax({
-            url: "data.xml",
-            dataType: "text",
-            beforeSend: function(x){
-                if(x && x.overrideMimeType){
-                    x.overrideMimeType("application/xml;charset=UTF-8");
-                }
-            },
-            success: function(data) {
-                document.getElementById("title").innerHTML = $(data).find("movie").find("title").text();
-                $(data).find("movie").each(function(){
-                    var title = $(this).find("title").text();
-                    document.getElementById("title").innerHTML = title;
-                });
-                
-            },
-            error: function(request, error){
-                console.log("code: "+request.state+"msg: "+request.responseText+"error: "+error);
-            }
-        });
-    </script>
+
 
 </body>
 
