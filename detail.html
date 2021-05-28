@@ -94,7 +94,14 @@
             <div class="movielogo">
                 <h1 style="text-align: center; font-size: xx-large;">늑대소년</h1>
             </div>
-            <div class="movie-poster" style="margin-bottom: 10px;">
+            <!-- <div class="color_form" style="width: auto; height: 30px; margin-bottom: 10px; max-width: 100%;">
+                <div class="color" style="background: #3f322c;"></div>
+                <div class="color" style="background: #2a2017;"></div>
+                <div class="color" style="background: #dedcc7;"></div>
+                <div class="color" style="background: #7b6857;"></div>
+                <div class="color" style="background: #5a362a;"></div>
+            </div> -->
+            <div class="movie-poster">
                 <div class="left"><img src="images/movies/wolfboy.jpeg" alt="" style="width: 100%; height: auto;"></div>
                 <div class="right" style="height: auto;">
                     <div class="color_pallete" style="background: #3f322c;"></div>
@@ -105,6 +112,11 @@
                     <div class="color_pallete" style="background: #5a362a;"></div>
                 </div>
             </div>
+            <!-- 재생 버튼  -->
+            <button class="button-youtube" style="width: 100%; height: 30px; text-align: center; margin-bottom: 20px;" onclick="play()">
+                재생
+            </button>
+            <iframe class="youtube" style="display: none;" width="100%" height="315" src="https://www.youtube.com/embed/66S2bjlapjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <br>
             <!-- 정보 -->
             <div class="movierelease">
@@ -125,24 +137,6 @@
                 <p><span class="name">출연:</span> 송중기, 박보영</p>
                 <p><span class="name">장르:</span> 멜로/로맨스, 드라마, 판타지</p>
             </div>
-            <!-- <div class="actions d-flex flex-start flex-middle">
-                <a href="#" class="link-item">
-                    <i class="fa fa-plus"></i></br>
-                    My List
-                </a>
-                <a href="#" class="link-item">
-                    <i class="fa fa-thumbs-up"></i></br>
-                    Like
-                </a>
-                <a href="#" class="link-item">
-                    <i class="fa fa-share"></i></br>
-                    Share
-                </a>
-                <a href="#" class="link-item">
-                    <i class="fa fa-download"></i></br>
-                    Download
-                </a>
-            </div> -->
         </section>
         
         <section id="mylist" class="container p-t-40" style="padding-top: 10px;">
@@ -224,5 +218,20 @@
         </a>
     </div>
 </body>
+<script>
+    function play(){
+        var check = $(".button-youtube").html();
+        // console.log(check);
+        if(check=="닫기"){
+            console.log(check);
+            $(".youtube").css("display","none");
+            $(".button-youtube").text("재생");
+        }
+        else{
+            $(".youtube").css("display","");
+            $(".button-youtube").text("닫기");
+        }
+    }
 
+</script>
 </html>
