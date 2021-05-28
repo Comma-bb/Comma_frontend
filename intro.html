@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/landing-pages.css">
 
     <script src="js/jquery-2.1.0.min.js"></script>
-    <script src="js/data.js"></script>
 </head>
 
 <body>
@@ -101,6 +100,7 @@
         }
 
         var systemDB;
+        var dataset;
 
         $(document).ready(function () {
             init();
@@ -148,7 +148,7 @@
                             + " color2 TEXT NOT NULL,"
                             + " color3 TEXT NOT NULL,"
                             + " color4 TEXT NOT NULL,"
-                            + " color5 TEXT NOT NULL";
+                            + " color5 TEXT NOT NULL)";
             db.transaction(function (tx) { 
                 tx.executeSql(strCreate);    
             });
@@ -163,12 +163,20 @@
         }
 
         function getTitle(db){
-            var strSql = "SELECT title FROM movie_board where idx=1"; 
+            var strSql = "SELECT title FROM movie_board WHERE idx = ?"; 
             db.transaction(function (tx) { 
-                tx.executeSql(strSql, [], function (tx, result) { 
-                    $("title").html(result);               
+                tx.executeSql(strSql, [1], function (tx, result) { 
+                    dataset = result.rows;
+                    if(dataset.length > 0){
+                        item = dataset.item(0);
+                        $("#title").html(item['title']);   
+                    }      
                 });
             });
+        }
+
+        function errorHandler(error) { 
+            alert('Error: '+error.message+' (Code '+error.code+')');
         }
     </script>
 </body>
