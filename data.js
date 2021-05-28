@@ -65,7 +65,7 @@ function insertDB(db, title, pubDate, genre, director, actor, img, color1, color
     });
 }
 
-//임시로 udx로 영화제목만 가져오기 -> 나중에 컬럼 한번에 가져올꺼임!~!
+//임시로 idx로 영화제목만 가져오기 -> 나중에 컬럼 한번에 가져올꺼임!~!
 function getTitle(){
     console.log("getTitle 들어옴");
     var strSql = "SELECT title FROM movie_board WHERE idx = ?"; 
@@ -74,6 +74,7 @@ function getTitle(){
             dataset = result.rows;
             if(dataset.length > 0){
                 item = dataset.item(0);
+                console.log(item['title']);
                 return item['title'];
             }      
         });
