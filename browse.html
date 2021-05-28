@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/browse.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"
         integrity="sha256-t2kyTgkh+fZJYRET5l9Sjrrl4UDain5jxdbqe8ejO8A=" crossorigin="anonymous" />
+
+        <script src="data.js"></script>
 </head>
 <body>
 <main>
@@ -33,6 +35,12 @@
         </header>
         <!-- 현재 날씨 기반 동그라미 영화4개 -->
         <div class="top-container">
+            <!-- 임시로 데이터 테스트 -->
+            <h2 id="title" style="color: aqua;"></h2>
+            <script>
+                var title = getTitle();
+                $("#title").html(title);
+            </script>
             <section class="weather-movie" id="weather-movie-1">
                 <div class="circle">
                     <img src="">
