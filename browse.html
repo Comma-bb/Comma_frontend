@@ -60,6 +60,41 @@
         </div>
         <!-- 색감 기반 영화 추천 목록 -->
         <div>
+            <!-- 날씨기반 영화 추천  -->
+            <section id="row0" class="container">
+                <h4 class="weather-recommend">
+                    날씨에 따른 영화 추천 
+                </h4>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="detail.html">
+                                <img src="images/movies/horrible-bosses-middle-poster.webp">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html">
+                                <img src="images/movies/horrible-bosses-middle-poster.webp">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html">
+                                <img src="images/movies/horrible-bosses-middle-poster.webp">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html">
+                                <img src="images/movies/horrible-bosses-middle-poster.webp">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html">
+                                <img src="images/movies/horrible-bosses-middle-poster.webp">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <section id="row1" class="container">
                 <h4 class="romantic-heading">
                     시원한 푸른 색감의 영화
@@ -163,7 +198,7 @@
                 </div>
             </section>
             <section id="row4" class="container">
-                <h4 class="romantic-heading">
+                <h4 id="romantic-heading">
                     시원한 푸른 색감의 영화
                 </h4>
                 <div>
@@ -196,40 +231,7 @@
                     </ul>
                 </div>
             </section>
-            <section id="row5" class="container">
-                <h4 class="romantic-heading">
-                    시원한 푸른 색감의 영화
-                </h4>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="detail.html">
-                                <img src="images/movies/horrible-bosses-middle-poster.webp">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="detail.html">
-                                <img src="images/movies/horrible-bosses-middle-poster.webp">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="detail.html">
-                                <img src="images/movies/horrible-bosses-middle-poster.webp">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="detail.html">
-                                <img src="images/movies/horrible-bosses-middle-poster.webp">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="detail.html">
-                                <img src="images/movies/horrible-bosses-middle-poster.webp">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+            
         </div>
     </div>
     <footer>
@@ -274,6 +276,23 @@
             console.log("구름  : "+ (resp.clouds.all) +"%" );
             var imgURL = "http://openweathermap.org/img/w/" + resp.weather[0].icon + ".png";
             $("#weather-icon").attr("src", imgURL);
+            if(resp.weather[0].main=="Clouds"){
+                $(".weather-recommend").text('흐린날에는 센치있는 파랑색감 영화 어때요?');
+            }
+            else if(resp.weather[0].main=="Clear"){
+                $(".weather-recommend").text('맑은 날에는 청량한 하이틴 영화죠!');
+            }
+            else if(resp.weather[0].main=="Rain"){
+                $(".weather-recommend").text('비오는 날에는 역시 로맨스 영화아닌가요?');
+            }
+            else if(resp.weather[0].main=="Rain" || resp.weather[0].main=="Drizzle"){
+                $(".weather-recommend").text('비오는 날에는 역시 로맨스 영화아닌가요?');
+            }
+            else if(resp.weather[0].main=="Thunderstorm"){
+                $(".weather-recommend").text('이불 밖은 위험해! 코미디 영화는 어때요?');
+            }
+            // $(".weather-recommend").text(resp.weather[0].main);
+
         }
     });
 </script>
