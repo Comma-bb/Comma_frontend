@@ -2,9 +2,6 @@
     background: black;
     color: white;
 }
-.header-item img{
-    margin: 0px auto;
-}
 .top-container{
     max-width: 100%;
     margin: 0;
@@ -16,6 +13,7 @@
     overflow-x: auto;
     text-align:center;
     padding: 0;
+    margin-bottom: 0;
 }
 .top-container ul li{
     display:inline-block;
@@ -34,13 +32,6 @@
     border-color: #0073E6;
     background: #efa2a9;
 }
-
-.container{
-    max-width: 100%;
-    margin: 0;
-    padding-top: 5px; padding-bottom: 5px;
-    padding-left:40px;padding-right: 40px;
-}
 .container ul{
     white-space:nowrap;
     overflow-x: auto;
@@ -54,12 +45,4 @@
 }
 .copyright{
     text-align: center;
-}
-
-/* mobile setting */
-@media(max-width: 600px){
-    .container{
-        padding-left: 3px;
-        padding-right: 3px;
-    }
 }
