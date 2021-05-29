@@ -1,27 +1,25 @@
-*{
-    background: black;
-    color: white;
+header{
+    position: relative;
+    background-color: black;
 }
-.top-container{
+.weather-container{
     max-width: 100%;
     margin: 0;
-    padding-top: 40px; padding-bottom: 5px;
-    padding-left:10px;padding-right: 10px;
+    padding-top: 100px;
+    text-align: center;
 }
-.top-container ul{
+.weather-container ul{
     white-space:nowrap;
     overflow-x: auto;
     text-align:center;
     padding: 0;
     margin-bottom: 0;
 }
-.top-container ul li{
+.weather-container ul li{
     display:inline-block;
     padding: 5px;
 }
-.weather-movie{
-    text-align: center;
-}
+
 .circle{
     width: 120px;
     height: 120px;
@@ -32,14 +30,22 @@
     border-color: #0073E6;
     background: #efa2a9;
 }
-.container ul{
+.weather-movie{
+    padding: auto;
+}
+.movie-list{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.movie-list ul{
     white-space:nowrap;
     overflow-x: auto;
     text-align:center;
     padding: 0;
+    margin: 0;
 }
 
-.container ul li{
+.movie-list ul li{
     display:inline-block;
     padding: 0;
 }
