@@ -108,22 +108,23 @@ function insertDB(db, title, pubDate, genre, director, actor, img, color1, color
 
 //임시로 idx로 영화제목만 가져오기 -> 나중에 컬럼 한번에 가져올꺼임!~!
 function getTitle(){
+    console.log("getTitle()들어옴");
     var title;
-    console.log("getTitle 들어옴");
     var strSql = "SELECT title FROM movie_board WHERE idx = ?"; 
     systemDB.transaction(function (tx) { 
         tx.executeSql(strSql, [1], function (tx, result) { 
             dataset = result.rows;
             if(dataset.length > 0){
                 item = dataset.item(0);
-                title = item['title'];
-                console.log(title);
-
-                return String(title);
-                // $("#title").text(title);
+                title = String(item['title']);
+                console.log("get에서 확인1: "+title);
             }     
         });
     });
+    setTimeout(function(){
+        console.log("get에서 확인2: "+title);
+        return title;
+    },300);
 }
 
 function selectAllList() { 
