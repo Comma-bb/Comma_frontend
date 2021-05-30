@@ -2,6 +2,7 @@
     --body-color: white;
     --headline-color: white;
     --link-color: rgb(255, 255, 255);
+    --black-color: black;
     --white-color: white;
     --red-color:#e50914;
     --light-color: rgb(231, 231, 231);
@@ -9,6 +10,7 @@
     --button-color: #e50914;
     --border-color: #e50914;
     --border: 1px solid #e50914;
+    --border-white:1px solid white;
     --border-radius: 3px;
 
     --txt-shadow:  1px 1px 2px rgb(228, 228, 228);
@@ -157,7 +159,9 @@ button:focus {
 .button{
     border: var(--border);
     border-radius: var(--border-radius);
-    padding: 10px 20px;
+    /* 상하 좌우 */
+    padding: 5px 20px;
+    /* 글씨 색 */
     color: var(--link-color) !important;
     background: var(--button-color);
     transition: all .3s;

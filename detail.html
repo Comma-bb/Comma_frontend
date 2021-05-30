@@ -100,14 +100,7 @@
                 <!-- 임시로 데이터 테스트 -->
                 <h4 id="title" style="color: white;">hihi</h4>
             </div>
-            <!-- <div class="color_form" style="width: auto; height: 30px; margin-bottom: 10px; max-width: 100%;">
-                <div class="color" style="background: #3f322c;"></div>
-                <div class="color" style="background: #2a2017;"></div>
-                <div class="color" style="background: #dedcc7;"></div>
-                <div class="color" style="background: #7b6857;"></div>
-                <div class="color" style="background: #5a362a;"></div>
-            </div> -->
-            <div class="movie-poster">
+            <div class="movie-poster" style="height: auto; overflow: auto;">
                 <div class="left"><img src="images/movies/wolfboy.jpeg" alt="" style="width: 100%; height: auto;"></div>
                 <div class="right" style="height: auto;">
                     <div class="color_pallete" style="background: #3f322c;"></div>
@@ -119,7 +112,7 @@
                 </div>
             </div>
             <!-- 재생 버튼  -->
-            <button class="button-youtube" style="width: 100%; height: 30px; text-align: center; margin-bottom: 20px;" onclick="play()">
+            <button class="button play" style="width: 100%; margin-bottom: 10px;" onclick="play()">
                 재생
             </button>
             <iframe class="youtube" style="display: none;" width="100%" height="315" src="https://www.youtube.com/embed/66S2bjlapjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -149,62 +142,88 @@
             <h4 class="romantic-heading">
                 <!-- 검색 해보세요! -->
             </h4>
-            <div class="my-list-page-container d-flex flex-start flex-middle">
-                <a href="detail.html">
-                    <img src="images/movies/horrible-bosses-middle-poster.webp" alt=""
-                    class="mylist_img p-r-10 p-l-10 image-size item">
-                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
-                        <div class="color" style="background: #2E9AFE;"></div>
-                        <div class="color" style="background: #FA5858;"></div>
-                        <div class="color" style="background: #81f781;"></div>
-                    </div>
-                </a>
-                <a href="detail.html">
-                    <img src="images/movies/kabir-singh-poster.webp" alt=""
-                    class="mylist_img p-r-10 p-l-10 image-size item">
-                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
-                        <div class="color" style="background: #2E9AFE;"></div>
-                        <div class="color" style="background: #FA5858;"></div>
-                        <div class="color" style="background: #81f781;"></div>
-                    </div>
-                </a>
-                <a href="detail.html">
-                    <img src="images/movies/extraction-poster.jpg" alt=""
-                    class="mylist_img p-r-10 p-l-10 image-size item">
-                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
-                        <div class="color" style="background: #2E9AFE;"></div>
-                        <div class="color" style="background: #FA5858;"></div>
-                        <div class="color" style="background: #81f781;"></div>
-                    </div>
-                </a>
-                <a href="detail.html">
-                    <img src="images/tv-show/poster/never-have-ever-short poster.jpg" alt=""
-                    class="mylist_img p-r-10 p-l-10 image-size item">
-                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
-                        <div class="color" style="background: #2E9AFE;"></div>
-                        <div class="color" style="background: #FA5858;"></div>
-                        <div class="color" style="background: #81f781;"></div>
-                    </div>
-                </a>
-                <a href="detail.html">
-                    <img src="images/movies/we-are-the-milers-poster-little.webp" alt=""
-                    class="mylist_img p-r-10 p-l-10 image-size item">
-                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
-                        <div class="color" style="background: #2E9AFE;"></div>
-                        <div class="color" style="background: #FA5858;"></div>
-                        <div class="color" style="background: #81f781;"></div>
-                    </div>
-                </a>
-                <a href="detail.html">
-                    <img src="images/movies/kabir-singh-poster.webp" alt=""
-                    class="mylist_img p-r-10 p-l-10 image-size item">
-                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
-                        <div class="color" style="background: #2E9AFE;"></div>
-                        <div class="color" style="background: #FA5858;"></div>
-                        <div class="color" style="background: #81f781;"></div>
-                    </div>
-                </a>
+            <div style="display: flex;margin: 0 auto; border: 1px solid white;">
+                <div style="width:50%; border:0px solid red; float:left; padding: 0px;">
+                    <a href="detail.html">
+                        <img src="images/movies/wolfboy.jpeg" alt=""
+                        class="mylist_img p-r-10 p-l-10 image-size item" style="width: 100%;">
+                        <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px;overflow: hidden;">
+                            <div class="color" style="background: #2E9AFE;"></div>
+                            <div class="color" style="background: #FA5858;"></div>
+                            <div class="color" style="background: #81f781;"></div>
+                        </div>
+                    </a>
+                </div>
+                <div style="width:50%; border:0px solid green; float:right; padding: 0px;">
+                    <a href="detail.html">
+                        <img src="images/movies/wolfboy.jpeg" alt=""
+                        class="mylist_img p-r-10 p-l-10 image-size item" style="width:100%;">
+                        <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px;overflow: hidden;">
+                            <div class="color" style="background: #2E9AFE;"></div>
+                            <div class="color" style="background: #FA5858;"></div>
+                            <div class="color" style="background: #81f781;"></div>
+                        </div>
+                    </a>
+                </div>
             </div>
+            
+
+            <!-- <div class="my-list-page-container d-flex flex-start flex-middle">
+                <a href="detail.html">
+                    <img src="images/movies/wolfboy.jpeg" alt=""
+                    class="mylist_img p-r-10 p-l-10 image-size item" style="width: 50%; height: auto;">
+                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
+                        <div class="color" style="background: #2E9AFE;"></div>
+                        <div class="color" style="background: #FA5858;"></div>
+                        <div class="color" style="background: #81f781;"></div>
+                    </div>
+                </a>
+                <a href="detail.html">
+                    <img src="images/movies/wolfboy.jpeg" alt=""
+                    class="mylist_img p-r-10 p-l-10 image-size item" style="width: 50%; height: auto;">
+                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
+                        <div class="color" style="background: #2E9AFE;"></div>
+                        <div class="color" style="background: #FA5858;"></div>
+                        <div class="color" style="background: #81f781;"></div>
+                    </div>
+                </a>
+                <a href="detail.html">
+                    <img src="images/movies/wolfboy.jpeg" alt=""
+                    class="mylist_img p-r-10 p-l-10 image-size item" style="width: 50%; height: auto;">
+                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
+                        <div class="color" style="background: #2E9AFE;"></div>
+                        <div class="color" style="background: #FA5858;"></div>
+                        <div class="color" style="background: #81f781;"></div>
+                    </div>
+                </a>
+                <a href="detail.html">
+                    <img src="images/movies/wolfboy.jpeg" alt=""
+                    class="mylist_img p-r-10 p-l-10 image-size item" style="width: 50%; height: auto;">
+                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
+                        <div class="color" style="background: #2E9AFE;"></div>
+                        <div class="color" style="background: #FA5858;"></div>
+                        <div class="color" style="background: #81f781;"></div>
+                    </div>
+                </a>
+                <a href="detail.html">
+                    <img src="images/movies/wolfboy.jpeg" alt=""
+                    class="mylist_img p-r-10 p-l-10 image-size item" style="width: 50%; height: auto;">
+                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
+                        <div class="color" style="background: #2E9AFE;"></div>
+                        <div class="color" style="background: #FA5858;"></div>
+                        <div class="color" style="background: #81f781;"></div>
+                    </div>
+                </a>
+                <a href="detail.html">
+                    <img src="images/movies/wolfboy.jpeg" alt=""
+                    class="mylist_img p-r-10 p-l-10 image-size item" style="width: 50%; height: auto;">
+                    <div class="color_form" style="width: auto; height: 15px; margin-bottom: 10px; max-width: 94%;">
+                        <div class="color" style="background: #2E9AFE;"></div>
+                        <div class="color" style="background: #FA5858;"></div>
+                        <div class="color" style="background: #81f781;"></div>
+                    </div>
+                </a>
+            </div> -->
         </section>
     </main>
     <br>
@@ -226,16 +245,16 @@
 </body>
 <script>
     function play(){
-        var check = $(".button-youtube").html();
+        var check = $(".play").html();
         // console.log(check);
         if(check=="닫기"){
             // console.log(check);
             $(".youtube").css("display","none");
-            $(".button-youtube").text("재생");
+            $(".play").text("재생");
         }
         else{
             $(".youtube").css("display","");
-            $(".button-youtube").text("닫기");
+            $(".play").text("닫기");
         }
     }
 
