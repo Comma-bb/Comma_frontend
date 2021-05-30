@@ -2,8 +2,18 @@ var systemDB;
 var dataset;
 let isTrue = true;
 
+//parseData(1);
+
 init();
 
+function parseData(no){
+
+    d3.csv("https://raw.githubusercontent.com/Comma-bb/Comma_frontend/master/movie_data.csv"
+        , function(data) {
+        document.getElementById(String(no)+"_title").innerHTML = data[no].title;
+        document.getElementById(String(no)+"_img").src = data[no].image;
+    });
+}
 //초기에 모든 데이터 셋팅..
 function setData(){
     insertDB(systemDB

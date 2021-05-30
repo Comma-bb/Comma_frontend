@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Comma Main</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <link rel="stylesheet" href="css/browse_hn.css">
     <link rel="stylesheet" href="css/weather-icons.min.css">
     <link rel="stylesheet" href="css/global.css">
@@ -82,16 +83,6 @@
             </header>
             <!-- 현재 날씨 기반 영화 추천 -->
             <div class="weather-container">
-
-                <!-- 임시로 데이터 테스트 -->
-                <h2>밑에 출력되면 성공..</h2>
-                <h2 id="title" style="color: aqua;"></h2>
-                <script>
-                    title = String(getTitle());
-                    //console.log("browse에서 확인: "+title);
-                    $("#title").html(title);
-                </script>
-
                 <div>
                     <!-- 날씨아이콘 -->
                     <a href="#"><img id="weather-icon" style="width: 15%;"></a>
@@ -103,25 +94,25 @@
                     <li>
                         <section class="weather-movie" id="weather-movie-1">
                             <div class="circle">
-                                <img src="images/movies/wolfboy.jpeg">
+                                <img id="1_img">
                             </div>
-                            <h6>늑대 소년</h6>
+                            <h6 id="1_title"></h6>
                         </section>
                     </li>
                     <li>
                         <section class="weather-movie" id="weather-movie-2">
                             <div class="circle">
-                                <img src="images/movies/wolfboy.jpeg">
+                                <img id="2_img">
                             </div>
-                            <h6>늑대 소년</h6>
+                            <h6 id="2_title"></h6>
                         </section>
                     </li>
                     <li>
                         <section class="weather-movie" id="weather-movie-3">
                             <div class="circle">
-                                <img src="images/movies/wolfboy.jpeg">
+                                <img id="3_img">
                             </div>
-                            <h6>늑대 소년</h6>
+                            <h6 id="3_title"></h6>
                         </section>
                     </li>
                 </ul>
@@ -356,4 +347,8 @@
             }
         }
     });
+
+    parseData(1);
+    parseData(2);
+    parseData(3);
 </script>
