@@ -136,7 +136,11 @@
                     <script>
                         var idx;
                         var hide = false;
+                        
                         $(document).ready(function(){ 
+                            // if($("#color1").css("background-color")=="#a293d0;"){
+                            // localStorage.setItem('idx',2);
+                            // }
                             $("input[name=search]").keydown(function (key) {
                                 if(key.keyCode == 13){
                                     search();
@@ -151,11 +155,11 @@
                        <td width=50%>
                             <a href="detail.html">
                                 <img id="img" src="https://movie-phinf.pstatic.net/20201229_146/1609226288425JgdsP_JPEG/movie_image.jpg?type=m665_443_2"  alt="";
-                                class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;">
+                                class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;" onclick="storeIdx1();">
                                 <div class="color_form" style="height: 15px; margin-bottom: 10px;padding-left: 12px; padding-right: 11px;">
-                                    <div class="color" id="color1" style="background: #a293d0;"></div>
-                                    <div class="color" id="color2" style="background: #4426a0;"></div>
-                                    <div class="color" id="color3" style="background: #46388d;"></div>
+                                    <div class="color" id="color1" style="background: #a293d0"></div>
+                                    <div class="color" id="color2" style="background: #4426a0"></div>
+                                    <div class="color" id="color3" style="background: #46388d"></div>
                                 </div>
                             </a>
                        </td>
@@ -392,11 +396,12 @@
                             localStorage.setItem('idx',idx);
                             
                         };
-    function storeIdx(idx){
+    function storeIdx1(idx){
         if(hide==false)
-            localStorage.setItem('idx',idx);
-        else
             localStorage.setItem('idx',2);
+    }
+    function storeIdx(idx){
+        localStorage.setItem('idx',idx);
     }
 
 </script>
