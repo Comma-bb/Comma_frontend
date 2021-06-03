@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Search</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/owl.carousel.css" />
+    <script src="lib/jquery 3.5.0.js"></script>
+    <script src="lib/owl.carousel.js"></script>
+
+    <!--main script file-->
+    <script src="js/main-script.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha256-t2kyTgkh+fZJYRET5l9Sjrrl4UDain5jxdbqe8ejO8A=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/browse.css">
+    <script src="js/jquery-2.1.0.min.js"></script>
+
+    <script>
+        var str;
+        
+        document.getElementById("print").innerHTML = strtext;
+        function Enter_Check(){
+            if(event.keyCode == 13){
+                window.location.href ="search_result.html"
+                var strtext = document.getElementById("searchtext").value;
+                
+                document.getElementById("print").innerHTML = strtext;
+                if(localStorage.getItem('idx')){
+                        var idx = localStorage.getItem('idx');
+                    }
+                getSearch(1,1);
+                str= strtext;
+                
+            }
+            
+        }
+    </script>
+
+    <!-- 검색 버튼 -->
+    <style> 
+        input[type=text] {
+          width: 130px;
+          box-sizing: border-box;
+          border: 1px solid white;
+          color: white;
+          border-radius: 4px;
+          font-size: 16px;
+          background-color: rgb(14, 14, 14);
+          background-position: 10px 10px; 
+          background-repeat: no-repeat;
+          padding: 12px 20px 12px 40px;
+          -webkit-transition: width 0.4s ease-in-out;
+          transition: width 0.4s ease-in-out;
+        }
+        
+        input[type=text]:focus {
+          width: 100%;
+        }
+        </style>
+</head>
+
+<body>
+    <main id="mainContainer" class="p-b-40">
+        <div>
+            <header class="d-flex space-between flex-center flex-middle">
+                <div class="nav-links d-flex flex-center flex-middle">
+                    <a href="/">
+                        <a href="/">
+                            <a href="browse.html"><h2 class="logo logo-text red-color f-s-28 m-r-25"><img src="images/icons/logo_header.PNG" height="50px" width="170px" alt="site logo main"></img></h2></a>
+                            <a href="browse.html"><h1 class="second-logo-text red-color f-s-28"><img src="images/icons/logo_header2.PNG" height="40px" width="40px" alt="site logo main"></h1></a>
+                        </a>
+                    </a>
+                </div>
+                <div class="righticons d-flex flex-end flex-middle">
+                    <a href="search.html"><img src="images/icons/search.svg" alt="search icon"></a>
+                    <div class="dropdown notification">
+                        <img src="images/icons/notification.svg" alt="notificatio icon">
+                        <div class="dropdown-content">
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="images/icons/user2.png" alt="user profile icon" class="user-icon">
+                                <span>You have new notification from <span>User 123</span></span>
+                            </a>
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="images/icons/user1.png" alt="user profile icon" class="user-icon">
+                                <span>You have new notification from <span>User 123</span></span>
+                            </a>
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="images/icons/user4.png" alt="user profile icon" class="user-icon">
+                                <span>You have new notification from <span>User 123</span></span>
+                            </a>
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="images/icons/user3.png" alt="user profile icon" class="user-icon">
+                                <span>You have new notification from <span>User 123</span></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img src="images/icons/user-image-green.png" alt="user profile icon" class="user-icon"> <span class="profile-arrow"></span>
+
+                        <div class="dropdown-content">
+                            <div class="profile-links">
+                                <a href="#" class="profile-item d-flex flex-middle">
+                                    <img src="images/icons/user1.png" alt="user profile icon" class="user-icon">
+                                    <span>Rajesh</span>
+                                </a>
+                                <a href="#" class="profile-item d-flex flex-middle">
+                                    <img src="images/icons/user2.png" alt="user profile icon" class="user-icon">
+                                    <span>Karan</span>
+                                </a>
+                                <a href="#" class="profile-item d-flex flex-middle">
+                                    <img src="images/icons/user3.png" alt="user profile icon" class="user-icon">
+                                    <span>Pappy</span>
+                                </a>
+                                <a href="#" class="profile-item d-flex flex-middle" style="margin-bottom: 13px;">
+                                    <img src="images/icons/user4.png" alt="user profile icon" class="user-icon">
+                                    <span>Denny</span>
+                                </a>
+                                <a href="#" class="profile-item last" >Manage Profiles</a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="links d-flex direction-column">
+                                <a href="home.html">Account</a>
+                                <a href="#">Help Center</a>
+                                <a href="/">Sign Out of Netflix</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </header>
+
+
+            <!--paretn div with black bg after main hero section-->
+            <div class="searchform d-flex flex-center flex-middle" style="padding-top: 100px;">
+                <form>
+                    <input type="text" id= "searchtext" name="search" placeholder="Search.." autocomplete="off" onkeydown="JavaScript:Enter_Check();">
+                </form>
+            </div>
+            <br>
+            
+            <section id="mylist" class="container p-t-40" style="padding-top: 10px; padding-left: 7px;">
+                <h4 class="romantic-heading">
+                </h4>
+                <h2 id= "print" style="color: blanchedalmond;"></h2>
+                <div class="movielogo">
+                    <script>
+                        if(localStorage.getItem('idx')){
+                            var idx = localStorage.getItem('idx');
+                        }
+                        getData(idx);
+                    </script>
+                    <h1 id="title" style="text-align: center; font-size: 30px;font-family: 'Noto Sans KR', sans-serif;"></h1>
+                </div>
+                <div class="movie-poster" style="height: auto; overflow: auto;">
+                    <div class="left"><img id="img" alt="" style="width: 100%; height: auto;"></div>
+                    <div class="right" style="height: auto;">
+                        <div id="color1" class="color_pallete" ></div>
+                        <div id="color2" class="color_pallete" ></div>
+                        <div id="color3" class="color_pallete" ></div>
+                        <div id="color4" class="color_pallete" ></div>
+                        <div id="color5" class="color_pallete" ></div>
+                        <div id="color6" class="color_pallete" ></div>
+                    </div>
+                </div>
+                <table width=100%>
+                    <tr>
+                       <td width=50%>
+                            <a href="detail.html">
+                                <img src="https://movie-phinf.pstatic.net/20201229_146/1609226288425JgdsP_JPEG/movie_image.jpg?type=m665_443_2" alt=""
+                                class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;">
+                                <div class="color_form" style="height: 15px; margin-bottom: 10px;padding-left: 12px; padding-right: 11px;">
+                                    <div class="color" style="background: #a293d0;"></div>
+                                    <div class="color" style="background: #4426a0;"></div>
+                                    <div class="color" style="background: #46388d;"></div>
+                                </div>
+                            </a>
+                       </td>
+                       <td width=50%>
+                        
+                        </a>
+                   </td>
+                       
+                    </tr>
+                </table>
+                
+            </section>
+        </div>
+        <footer class="mainfooter d-flex direction-column space-between" id=" footer">
+            <div class="widgets d-flex space-between"><br><br><br><br><br><br>
+                @copyright 2021 Comma.
+            </div>
+            <br>
+        </footer>
+    </main>
+
+    <!-- 밑에 버튼  -->
+    <div class="footer-navigation d-flex space-between">
+        <a href="browse.html" class="nav-item">
+            <i class="fa fa-home" aria-hidden="true"></i> </br>
+            Home
+        </a>
+        <a href="search.html" class="nav-item">
+            <i class="fa fa-search" aria-hidden="true"></i></br>
+            Search
+        </a>
+        <a href="home.html" class="nav-item">
+            <i class="fa fa-film" aria-hidden="true"></i></br>
+            About
+        </a>
+    </div>
+</body>
+
+</html>

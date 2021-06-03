@@ -301,28 +301,24 @@ function getCloudy(idx,j){    //흐린날 우중충한 영화 로드
             }); 
         }); 
 }
-function getSearch(idx,j){    //검색 영화
+function getSearch(idx){
     db = systemDB
-    var titleId;
-    var imgId;
-    
-    titleId = String(j)+"_title";
-        imgId = String(j)+"_img";
-
-        var strSql = "SELECT * FROM movie_board WHERE idx = ?"; 
-        db.transaction(function (tx) { 
-            tx.executeSql(strSql, [idx], function (tx, result) { 
-                dataset = result.rows; 
-                if (dataset.length > 0) {
-                    for (var i = 0, item = null; i < dataset.length; i++) { 
-                        item = dataset.item(i); 
-                        //$(thumbId).src = item['img'];  
-                        document.getElementById(imgId).src = item['img']; 
-                        document.getElementById(titleId).innerHTML = item['title'];             
-                    }
-                } else {
-                    console.log("데이터 리스트 없음");
+    var strSql = "SELECT * FROM movie_board WHERE idx = ?"; 
+    db.transaction(function (tx) { 
+        tx.executeSql(strSql, [idx], function (tx, result) { 
+            dataset = result.rows; 
+            if (dataset.length > 0) {
+                for (var i = 0, item = null; i < dataset.length; i++) { 
+                    item = dataset.item(i); 
+                    document.getElementById("img").src = item['img'];  
+                    console.log("333333");
+                    $("#color1").css("background-color",item['color1']);       
+                    $("#color2").css("background-color",item['color2']); 
+                    $("#color3").css("background-color",item['color3']); 
                 }
-            }); 
+            } else {
+                console.log("데이터 리스트 없음");
+            }
         }); 
-    }
+    }); 
+}

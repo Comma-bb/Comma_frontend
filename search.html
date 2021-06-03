@@ -23,27 +23,8 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/browse.css">
     <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="data.js"></script>
 
-    <script>
-        var str;
-        
-        document.getElementById("print").innerHTML = strtext;
-        function Enter_Check(){
-            if(event.keyCode == 13){
-                window.location.href ="search_result.html"
-                var strtext = document.getElementById("searchtext").value;
-                
-                document.getElementById("print").innerHTML = strtext;
-                if(localStorage.getItem('idx')){
-                        var idx = localStorage.getItem('idx');
-                    }
-                getSearch(1,1);
-                str= strtext;
-                
-            }
-            
-        }
-    </script>
 
     <!-- 검색 버튼 -->
     <style> 
@@ -143,88 +124,99 @@
             <!--paretn div with black bg after main hero section-->
             <div class="searchform d-flex flex-center flex-middle" style="padding-top: 100px;">
                 <form>
-                    <input type="text" id= "searchtext" name="search" placeholder="Search.." autocomplete="off" onkeydown="JavaScript:Enter_Check();">
+                    <input type="text" style="display:none;"/>
+                    <input type="text" id= "searchtext" name="search" placeholder="Search.." autocomplete="off">
                 </form>
             </div>
             <br>
             
             <section id="mylist" class="container p-t-40" style="padding-top: 10px; padding-left: 7px;">
                 <h4 class="romantic-heading">
+                    <script>
+                        var idx;
+                        $(document).ready(function(){ 
+                            $("input[name=search]").keydown(function (key) {
+                                if(key.keyCode == 13){
+                                    search();
+                                }
+                            });                   
+                        });
+                
+                    </script>
                 </h4>
-                <h2 id= "print" style="color: blanchedalmond;"></h2>
-                <table width=100%>
+                <table width=100% id="search-table">
                     <tr>
                        <td width=50%>
                             <a href="detail.html">
-                                <img src="https://movie-phinf.pstatic.net/20201229_146/1609226288425JgdsP_JPEG/movie_image.jpg?type=m665_443_2" alt=""
+                                <img id="img" src="https://movie-phinf.pstatic.net/20201229_146/1609226288425JgdsP_JPEG/movie_image.jpg?type=m665_443_2" alt=""
                                 class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;">
                                 <div class="color_form" style="height: 15px; margin-bottom: 10px;padding-left: 12px; padding-right: 11px;">
-                                    <div class="color" style="background: #a293d0;"></div>
-                                    <div class="color" style="background: #4426a0;"></div>
-                                    <div class="color" style="background: #46388d;"></div>
+                                    <div class="color" id="color1" style="background: #a293d0;"></div>
+                                    <div class="color" id="color2" style="background: #4426a0;"></div>
+                                    <div class="color" id="color3" style="background: #46388d;"></div>
                                 </div>
                             </a>
                        </td>
                        <td width=50%>
                             <a href="detail.html">
-                                <img src="https://movie-phinf.pstatic.net/20171222_56/1513906341368blx3Q_JPEG/movie_image.jpg" alt=""
+                                <img id="img2" src="https://movie-phinf.pstatic.net/20171222_56/1513906341368blx3Q_JPEG/movie_image.jpg" alt=""
                                 class="mylist_img p-r-10 image-size item" style="max-width: 90%;">
                                 <div class="color_form p-r-10" style="max-width: 90%; height: 15px; margin-bottom: 10px;overflow: hidden;">
-                                    <div class="color" style="background: #732f6a;"></div>
-                                    <div class="color" style="background: #543e53;"></div>
-                                    <div class="color" style="background: #6da0d5;"></div>
+                                    <div id="c1" class="color" style="background: #732f6a;"></div>
+                                    <div id="c2" class="color" style="background: #543e53;"></div>
+                                    <div id="c3" class="color" style="background: #6da0d5;"></div>
                                 </div>
                             </a>
                        </td>
                     </tr>
                 </table>
-                <table width=100%>
+                <table width=100% id="search-table">
                     <tr>
                        <td width=50%>
                             <a href="detail.html">
-                                <img src="https://movie-phinf.pstatic.net/20150114_206/1421200132061BpI2D_JPEG/movie_image.jpg" alt=""
+                                <img id="img3" src="https://movie-phinf.pstatic.net/20150114_206/1421200132061BpI2D_JPEG/movie_image.jpg" alt=""
                                 class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;">
                                 <div class="color_form" style="height: 15px; margin-bottom: 10px;padding-left: 12px; padding-right: 11px;">
-                                    <div class="color" style="background: #d2a02d;"></div>
-                                    <div class="color" style="background: #be8b5e;"></div>
-                                    <div class="color" style="background: #e3be39;"></div>
+                                    <div id="c4" class="color" style="background: #d2a02d;"></div>
+                                    <div id="c5" class="color" style="background: #be8b5e;"></div>
+                                    <div id="c6" class="color" style="background: #e3be39;"></div>
                                 </div>
                             </a>
                        </td>
                        <td width=50%>
                             <a href="detail.html">
-                                <img src="https://movie-phinf.pstatic.net/20190712_55/15628945961130s231_JPEG/movie_image.jpg" alt=""
+                                <img id="img4" src="https://movie-phinf.pstatic.net/20190712_55/15628945961130s231_JPEG/movie_image.jpg" alt=""
                                 class="mylist_img p-r-10 image-size item" style="max-width: 90%;">
                                 <div class="color_form p-r-10" style="max-width: 90%; height: 15px; margin-bottom: 10px;overflow: hidden;">
-                                    <div class="color" style="background: #506429;"></div>
-                                    <div class="color" style="background: #435024;"></div>
-                                    <div class="color" style="background: #8b6b3c;"></div>
+                                    <div id="c7" class="color" style="background: #506429;"></div>
+                                    <div id="c8" class="color" style="background: #435024;"></div>
+                                    <div id="c9" class="color" style="background: #8b6b3c;"></div>
                                 </div>
                             </a>
                        </td>
                     </tr>
                 </table>
-                <table width=100%>
+                <table width=100% id="search-table">
                     <tr>
                        <td width=50%>
                             <a href="detail.html">
-                                <img src="https://movie-phinf.pstatic.net/20160219_61/1455872433882gKqgb_JPEG/movie_image.jpg" alt=""
+                                <img id="img5" src="https://movie-phinf.pstatic.net/20160219_61/1455872433882gKqgb_JPEG/movie_image.jpg" alt=""
                                 class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;">
                                 <div class="color_form" style="height: 15px; margin-bottom: 10px;padding-left: 12px; padding-right: 11px;">
-                                    <div class="color" style="background: #972a3d;"></div>
-                                    <div class="color" style="background: #000002;"></div>
-                                    <div class="color" style="background: #a22640;"></div>
+                                    <div id="c10" class="color" style="background: #972a3d;"></div>
+                                    <div id="c11" class="color" style="background: #000002;"></div>
+                                    <div id="c12" class="color" style="background: #a22640;"></div>
                                 </div>
                             </a>
                        </td>
                        <td width=50%>
                             <a href="detail.html">
-                                <img src="http://t1.daumcdn.net/cfile/2653C44F5285D86E2D" alt=""
+                                <img id="img6" src="http://t1.daumcdn.net/cfile/2653C44F5285D86E2D" alt=""
                                 class="mylist_img p-r-10 image-size item" style="max-width: 90%;">
                                 <div class="color_form p-r-10" style="max-width: 90%; height: 15px; margin-bottom: 10px;overflow: hidden;">
-                                    <div class="color" style="background: #ab1919;"></div>
-                                    <div class="color" style="background: #d58c8c;"></div>
-                                    <div class="color" style="background: #fab9a5;"></div>
+                                    <div id="c13" class="color" style="background: #ab1919;"></div>
+                                    <div id="c14" class="color" style="background: #d58c8c;"></div>
+                                    <div id="c15" class="color" style="background: #fab9a5;"></div>
                                 </div>
                             </a>
                        </td>
@@ -255,6 +247,143 @@
             About
         </a>
     </div>
+    
+<script>
+    search = function (){
+        $("#img2").hide(); // Hide
+        $("#img3").hide();
+        $("#img4").hide();
+        $("#img5").hide();
+        $("#img6").hide();
+        $("#c1").hide();
+        $("#c2").hide();
+        $("#c3").hide();
+        $("#c4").hide();
+        $("#c5").hide();
+        $("#c6").hide();
+        $("#c7").hide();
+        $("#c8").hide();
+        $("#c9").hide();
+        $("#c10").hide();
+        $("#c11").hide();
+        $("#c12").hide();
+        $("#c13").hide();
+        $("#c14").hide();
+        $("#c15").hide();
+        $("#c16").hide();
+
+                            //검색 찾는 로직 구현
+                
+                            if($("input[name=search]").val()=="너의 이름은."){
+                                getSearch('1'); 
+                                idx=1;
+                            }
+                            else if($("input[name=search]").val()=="라라랜드"){
+                                getSearch('2');  
+                                idx=2;
+                            }
+                            else if($("input[name=search]").val()=="날씨의 아이"){
+                                getSearch('3');  
+                                idx=3;
+                            }
+                            else if($("input[name=search]").val()=="코코"){
+                                getSearch('4');  
+                                idx=4;
+                            }
+                            else if($("input[name=search]").val()=="파이브 피트"){
+                                getSearch('5');  
+                                idx=5;
+                            }
+                            else if($("input[name=search]").val()=="리틀 포레스트"){
+                                getSearch('6');  
+                                idx=6;
+                            }
+                            else if($("input[name=search]").val()=="돈"){
+                                getSearch('7');  
+                                idx=7;
+                            }
+                            else if($("input[name=search]").val()=="마담 프루스트의 비밀정원"){
+                                getSearch('8');  
+                                idx=8;
+                            }
+                            else if($("input[name=search]").val()=="나는 내일, 어제의 너와 만난다"){
+                                getSearch('9');  
+                                idx=9;
+                            }
+                            else if($("input[name=search]").val()=="시동"){
+                                getSearch('10');  
+                                idx=10;
+                            }
+                            else if($("input[name=search]").val()=="아이 필 프리티"){
+                                getSearch('11');  
+                                idx=11;
+                            }
+                            else if($("input[name=search]").val()=="어바웃 타임"){
+                                getSearch('12');  
+                                idx=12;
+                            }
+                            else if($("input[name=search]").val()=="데드풀"){
+                                getSearch('13');  
+                                idx=13;
+                            }
+                            else if($("input[name=search]").val()=="헝거게임 : 판엠의 불꽃"){
+                                getSearch('14');  
+                                idx=14;
+                            }
+                            else if($("input[name=search]").val()=="인턴"){
+                                getSearch('15');  
+                                idx=15;
+                            }
+                            else if($("input[name=search]").val()=="업"){
+                                getSearch('16');  
+                                idx=16;
+                            }
+                            else if($("input[name=search]").val()=="주먹왕 릴프"){
+                                getSearch('17');  
+                                idx=17;
+                            }
+                            else if($("input[name=search]").val()=="토이 스토리4"){
+                                getSearch('18');  
+                                idx=18;
+                            }
+                            else if($("input[name=search]").val()=="인사이드 아웃"){
+                                getSearch('19');  
+                                idx=19;
+                            }
+                            else if($("input[name=search]").val()=="주토피아"){
+                                getSearch('20');  
+                                idx=20;
+                            }
+                            else if($("input[name=search]").val()=="러브 액츄얼리"){
+                                getSearch('21');  
+                                idx=21;
+                            }
+                            else if($("input[name=search]").val()=="500일의 썸머"){
+                                getSearch('22');  
+                                idx=22;
+                            }
+                            else if($("input[name=search]").val()=="장난스런 키스"){
+                                getSearch('23');  
+                                idx=23;
+                            }
+                            else if($("input[name=search]").val()=="잭 스나이더의 저스티스 리그"){
+                                getSearch('24');  
+                                idx=24;
+                            }
+                            else if($("input[name=search]").val()=="악인전"){
+                                getSearch('25');  
+                                idx=25;
+                            }
+                            else if($("input[name=search]").val()=="존 윅 - 리로드"){
+                                getSearch('26');  
+                                idx=26;
+                            }
+                                
+                
+                            
+                        };
+</script>
+   
 </body>
 
 </html>
