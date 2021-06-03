@@ -38,9 +38,7 @@ function setData(){
             insertDB(systemDB,
             "시동","2019","드라마","최정열","마동석|박정민|정해인|염정아|최성은|","https://upload.wikimedia.org/wikipedia/ko/5/57/%EC%8B%9C%EB%8F%99_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg","#32b1d2","#dd343b","#48790c","#0285ef","#e3c1dc","https://youtu.be/hKlpat_0IF0");
             insertDB(systemDB,
-            "아이 필 프리티","2018","코미디","에비 콘|마크 실버스테인","","https://movie-phinf.pstatic.net/20180601_276/1527835091787c3BdN_JPEG/movie_image.jpg?type=f172_234","#d00508","#e69290","#c80c0a","#e48685","#3b3a38","https://youtu.be/5xM5KSQxMeo");
-            insertDB(systemDB,
-            "아이 필 프리티","2018","코미디","에비 콘|마크 실버스테인","","https://movie-phinf.pstatic.net/20180601_276/1527835091787c3BdN_JPEG/movie_image.jpg?type=f172_234","#d00508","#e69290","#c80c0a","#e48685","#3b3a38","https://youtu.be/5xM5KSQxMeo");
+            "아이 필 프리티","2018","코미디","에비 콘|마크 실버스테인","에이미 슈머|미셸 윌리엄스| 로리 스코벨| 톰 호퍼| 로렌 허튼","https://movie-phinf.pstatic.net/20180601_276/1527835091787c3BdN_JPEG/movie_image.jpg?type=f172_234","#d00508","#e69290","#c80c0a","#e48685","#3b3a38","https://youtu.be/5xM5KSQxMeo");
             insertDB(systemDB,
             "어바웃 타임","2013","로맨스/코미디","리차드 커티스","돔놀 글리슨|레이첼 맥아담스","https://movie-phinf.pstatic.net/20131115_243/1384498185621awKv1_JPEG/movie_image.jpg?type=f172_234","#ab1919","#d58c8c","#fab9a5","#8ba34f","#bb2d23","https://youtu.be/tnyWkyDGWuM");
             insertDB(systemDB,
@@ -71,22 +69,6 @@ function setData(){
             "악인전","2019","범죄/액션","이원태","마동석|김무열|김성규|","https://movie-phinf.pstatic.net/20190515_203/1557888285764Rvouz_JPEG/movie_image.jpg","#35354d","#181b2a","#282b34","#80abb2","#0e0e0e","https://youtu.be/UmebAbuTfXI");
             insertDB(systemDB,
             "존 윅 - 리로드","2017","액션/범죄/스릴러","채드 스타헬스키","키아누 리브스","https://movie-phinf.pstatic.net/20200807_193/1596789703698oLgpX_JPEG/movie_image.jpg","#6d6e72","#47545c","#000004","#27343c","#27343c","https://youtu.be/qtIaqB1h37A");
-
-
-
-
-
-
-
-
-
-
-
-                        
-            
-            
-            
-    
 }
 
 function init(){
