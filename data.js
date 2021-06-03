@@ -4,8 +4,6 @@ let isTrue = true;
 
 var id;
 
-//parseData(1);
-
 init();
 
 function parseData(no){
@@ -224,11 +222,47 @@ function getData(){
             if (dataset.length > 0) {
                 for (var i = 0, item = null; i < dataset.length; i++) { 
                     item = dataset.item(i); 
-                    $("#title-block").html(item['title']);                
+                    $("#title").html(item['title']); 
+                    $("#year").html(item['pubDate']); 
+                    document.getElementById("img").src = item['img'];   
+                    $('#url').attr('src', item['url']); 
+                    //$("#url").src(item['url']);  
+                    //$("#img").attr("src",item['img']);            
+                    $("#genre").html(item['genre']);             
+                    $("#actor").html(item['actor']);
+                    $("#color1").css("background-color",item['color1']);       
+                    $("#color2").css("background-color",item['color2']); 
+                    $("#color3").css("background-color",item['color3']); 
+                    $("#color4").css("background-color",item['color4']); 
+                    $("#color5").css("background-color",item['color5']); 
+                    $("#color6").css("background-color",item['color1']); 
                 }
             } else {
                 console.log("데이터 리스트 없음");
             }
         }); 
     }); 
+}
+
+function getThumnail(){
+    db = systemDB
+    var thumbId;
+    for(var j=1; j<21; j++){
+        thumbId = "thumb"+String(j);
+        var strSql = "SELECT * FROM movie_board WHERE idx = ?"; 
+        db.transaction(function (tx) { 
+            tx.executeSql(strSql, [j], function (tx, result) { 
+                dataset = result.rows; 
+                if (dataset.length > 0) {
+                    for (var i = 0, item = null; i < dataset.length; i++) { 
+                        item = dataset.item(i); 
+                        //$(thumbId).src = item['img'];  
+                        document.getElementById(thumbId).src = item['img'];              
+                    }
+                } else {
+                    console.log("데이터 리스트 없음");
+                }
+            }); 
+        }); 
+    }
 }
