@@ -178,27 +178,6 @@ function insertDB(db, title, pubDate, genre, director, actor, img, color1, color
     },100);
 }
 
-//임시로 idx로 영화제목만 가져오기 -> 나중에 컬럼 한번에 가져올꺼임!~!
-function getTitle(){
-    console.log("getTitle()들어옴");
-    var title;
-    var strSql = "SELECT title FROM movie_board WHERE idx = ?"; 
-    systemDB.transaction(function (tx) { 
-        tx.executeSql(strSql, [1], function (tx, result) { 
-            dataset = result.rows;
-            if(dataset.length > 0){
-                item = dataset.item(0);
-                title = String(item['title']);
-                console.log("get에서 확인1: "+title);
-            }     
-        });
-    });
-    setTimeout(function(){
-        console.log("get에서 확인2: "+title);
-        return title;
-    },300);
-}
-
 function selectAllList() { 
     db = systemDB
     var strSql = "SELECT * FROM movie_board"; 
@@ -267,25 +246,58 @@ function getData(idx){
     }); 
 }
 
-function getThumnail(){
+function getSunny(idx,j){    //맑은날 로맨스 영화 로드
     db = systemDB
-    var thumbId;
-    for(var j=1; j<21; j++){
-        thumbId = "thumb"+String(j);
+    var titleId;
+    var imgId;
+
+    titleId = String(j)+"_title";
+        imgId = String(j)+"_img";
+
         var strSql = "SELECT * FROM movie_board WHERE idx = ?"; 
         db.transaction(function (tx) { 
-            tx.executeSql(strSql, [j], function (tx, result) { 
+            tx.executeSql(strSql, [idx], function (tx, result) { 
                 dataset = result.rows; 
                 if (dataset.length > 0) {
                     for (var i = 0, item = null; i < dataset.length; i++) { 
                         item = dataset.item(i); 
                         //$(thumbId).src = item['img'];  
-                        document.getElementById(thumbId).src = item['img'];              
+                        document.getElementById(imgId).src = item['img']; 
+                        document.getElementById(titleId).innerHTML = item['title'];             
                     }
                 } else {
                     console.log("데이터 리스트 없음");
                 }
             }); 
         }); 
-    }
+
+}
+
+function getCloudy(idx,j){    //흐린날 우중충한 영화 로드
+    db = systemDB
+    var titleId;
+    var imgId;
+    
+    titleId = String(j)+"_title";
+        imgId = String(j)+"_img";
+
+        var strSql = "SELECT * FROM movie_board WHERE idx = ?"; 
+        db.transaction(function (tx) { 
+            tx.executeSql(strSql, [idx], function (tx, result) { 
+                dataset = result.rows; 
+                if (dataset.length > 0) {
+                    for (var i = 0, item = null; i < dataset.length; i++) { 
+                        item = dataset.item(i); 
+                        //$(thumbId).src = item['img'];  
+                        document.getElementById(imgId).src = item['img']; 
+                        document.getElementById(titleId).innerHTML = item['title'];   
+                        document.getElementById(imgId).onclick = function(){
+                            localStorage.setItem('idx',idx);
+                        }
+                    }
+                } else {
+                    console.log("데이터 리스트 없음");
+                }
+            }); 
+        }); 
 }

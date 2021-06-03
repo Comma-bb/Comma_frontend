@@ -94,7 +94,9 @@
                     <li>
                         <section class="weather-movie" id="weather-movie-1">
                             <div class="circle">
-                                <img id="1_img">
+                                <a href="detail.html">
+                                    <img id="1_img">
+                                </a>
                             </div>
                             <h6 id="1_title"></h6>
                         </section>
@@ -102,7 +104,9 @@
                     <li>
                         <section class="weather-movie" id="weather-movie-2">
                             <div class="circle">
-                                <img id="2_img">
+                                <a href="detail.html">
+                                    <img id="2_img">
+                                </a>
                             </div>
                             <h6 id="2_title"></h6>
                         </section>
@@ -110,7 +114,9 @@
                     <li>
                         <section class="weather-movie" id="weather-movie-3">
                             <div class="circle">
-                                <img id="3_img">
+                                <a href="detail.html">
+                                    <img id="3_img">
+                                </a>
                             </div>
                             <h6 id="3_title"></h6>
                         </section>
@@ -333,18 +339,33 @@
             $("#weather-icon").attr("src", imgURL);
             if(resp.weather[0].main=="Clouds"){
                 $(".weather-recommend").text('흐린날에는 차분한 색감의 영화 어떠세요?');
+                getCloudy(24,1);
+                getCloudy(25,2);
+                getCloudy(26,3);
             }
             else if(resp.weather[0].main=="Clear"){
                 $(".weather-recommend").text('맑은 날에는 역시 로맨스 영화아닌가요?');
+                getSunny(21,1);
+                getSunny(22,2);
+                getSunny(23,3);
             }
             else if(resp.weather[0].main=="Rain"){
                 $(".weather-recommend").text('비오는 날에는 차분한 색감의 영화 어떠세요?');
+                getCloudy(24,1);
+                getCloudy(25,2);
+                getCloudy(26,3);
             }
             else if(resp.weather[0].main=="Drizzle"){
                 $(".weather-recommend").text('비오는 날에는 차분한 색감의 영화 어떠세요?');
+                getCloudy(24,1);
+                getCloudy(25,2);
+                getCloudy(26,3);
             }
             else if(resp.weather[0].main=="Thunderstorm"){
                 $(".weather-recommend").text('이불 밖은 위험해! 달달한 로맨스 영화나 보죠ㅡㅡ^');
+                getSunny(21,1);
+                getSunny(22,2);
+                getSunny(23,3);
             }
         }
     });
