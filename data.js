@@ -1,6 +1,7 @@
 var systemDB;
 var dataset;
 let isTrue = true;
+var len;
 
 var id;
 
@@ -85,7 +86,8 @@ function init(){
     createTable(db);
     systemDB = db; 
 
-    setData();
+    //데이터 개수 세기 
+    countDB();
 }
 
 function createTable(db) {
@@ -129,6 +131,27 @@ function checkDB(db,title){
             }
         }); 
     }); 
+}
+
+function countDB(){
+    db = systemDB;
+    var count = "select idx from movie_board";
+        db.transaction(function (tx) { 
+            tx.executeSql(count, [], function (tx, result) { 
+                len = result.rows.length;
+                console.log(len);
+        }); 
+    }); 
+
+    setTimeout(function(){
+        if(len>26){
+            console.log("데이터 26개 초과");
+            isTrue = false;
+        }
+        else{
+            setData();
+        }
+    },300);
 }
 
 function insertDB(db, title, pubDate, genre, director, actor, img, color1, color2, color3, color4, color5,url) {
