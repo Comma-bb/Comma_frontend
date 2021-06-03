@@ -213,11 +213,11 @@ function dropTable(db) {
 }
 
 //idx 이용해 영화 데이터 불러오기
-function getData(){
+function getData(idx){
     db = systemDB
     var strSql = "SELECT * FROM movie_board WHERE idx = ?"; 
     db.transaction(function (tx) { 
-        tx.executeSql(strSql, [id], function (tx, result) { 
+        tx.executeSql(strSql, [idx], function (tx, result) { 
             dataset = result.rows; 
             if (dataset.length > 0) {
                 for (var i = 0, item = null; i < dataset.length; i++) { 
