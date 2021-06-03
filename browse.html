@@ -26,7 +26,7 @@
                     </a>
                 </div>
                 <div class="righticons d-flex flex-end flex-middle">
-                    <a href="search.html"><img src="images/icons/search.svg" alt="search icon"></a>
+                    <a href="search.html" ><img src="images/icons/search.svg" alt="search icon"></a>
                         <div class="dropdown notification">
                             <img src="images/icons/notification.svg" alt="notificatio icon">
                             <div class="dropdown-content">
@@ -122,7 +122,7 @@
             <div>
                 <section id="list1" class="movie-list">
                     <h4 class="romantic-heading">
-                        시원한 푸른 색감의 영화
+                        몽환적인 보랏빛 영화 어떠세요?
                     </h4>
                     <div>
                         <ul>
@@ -161,7 +161,7 @@
                 </section>
                 <section id="list2" class="movie-list">
                     <h4 class="romantic-heading">
-                        시원한 푸른 색감의 영화
+                        ㅇㅇㅇㅇ
                     </h4>
                     <div>
                         <ul>
@@ -200,7 +200,7 @@
                 </section>
                 <section id="list3" class="movie-list">
                     <h4 class="romantic-heading">
-                        시원한 푸른 색감의 영화
+                        정열적인 빨간색감의 영화 어떠세요?
                     </h4>
                     <div>
                         <ul>
@@ -239,7 +239,7 @@
                 </section>
                 <section id="list4" class="movie-list">
                     <h4 class="romantic-heading">
-                        시원한 푸른 색감의 영화
+                        다채로운 색감이 돋보이는 애니메이션 어떠세요?
                     </h4>
                     <div>
                         <ul>
@@ -331,19 +331,19 @@
             var imgURL = "http://openweathermap.org/img/w/" + resp.weather[0].icon + ".png";
             $("#weather-icon").attr("src", imgURL);
             if(resp.weather[0].main=="Clouds"){
-                $(".weather-recommend").text('흐린날에는 차분한 색감의 영화 어때요?');
+                $(".weather-recommend").text('흐린날에는 차분한 색감의 영화 어떠세요?');
             }
             else if(resp.weather[0].main=="Clear"){
-                $(".weather-recommend").text('맑은 날에는 청량한 하이틴 영화죠!');
+                $(".weather-recommend").text('맑은 날에는 역시 로맨스 영화아닌가요?');
             }
             else if(resp.weather[0].main=="Rain"){
-                $(".weather-recommend").text('비오는 날에는 역시 로맨스 영화아닌가요?');
+                $(".weather-recommend").text('비오는 날에는 차분한 색감의 영화 어떠세요?');
             }
-            else if(resp.weather[0].main=="Rain" || resp.weather[0].main=="Drizzle"){
-                $(".weather-recommend").text('비오는 날에는 역시 로맨스 영화아닌가요?');
+            else if(resp.weather[0].main=="Drizzle"){
+                $(".weather-recommend").text('비오는 날에는 차분한 색감의 영화 어떠세요?');
             }
             else if(resp.weather[0].main=="Thunderstorm"){
-                $(".weather-recommend").text('이불 밖은 위험해! 오늘 코미디 영화는 어때요?');
+                $(".weather-recommend").text('이불 밖은 위험해! 달달한 로맨스 영화나 보죠ㅡㅡ^');
             }
         }
     });

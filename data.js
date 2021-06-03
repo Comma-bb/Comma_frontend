@@ -2,6 +2,8 @@ var systemDB;
 var dataset;
 let isTrue = true;
 
+var id;
+
 //parseData(1);
 
 init();
@@ -210,4 +212,23 @@ function dropTable(db) {
     console.log("dropTable");
     setTimeout(selectAllList,1000);
     // selectAllList();
+}
+
+//idx 이용해 영화 데이터 불러오기
+function getData(){
+    db = systemDB
+    var strSql = "SELECT * FROM movie_board WHERE idx = ?"; 
+    db.transaction(function (tx) { 
+        tx.executeSql(strSql, [id], function (tx, result) { 
+            dataset = result.rows; 
+            if (dataset.length > 0) {
+                for (var i = 0, item = null; i < dataset.length; i++) { 
+                    item = dataset.item(i); 
+                    $("#title-block").html(item['title']);                
+                }
+            } else {
+                console.log("데이터 리스트 없음");
+            }
+        }); 
+    }); 
 }
