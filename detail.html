@@ -96,8 +96,10 @@
         <section class="movieinformation container">
             <div class="movielogo">
                 <script>
-                    id = 2;
-                    getData();
+                    if(localStorage.getItem('idx')){
+                        var idx = localStorage.getItem('idx');
+                    }
+                    getData(idx);
                 </script>
                 <h1 id="title" style="text-align: center; font-size: xx-large;"></h1>
             </div>
@@ -158,7 +160,7 @@
             $(".play").text("재생");
         }
         else{
-            $(".youtube").css("display","");b
+            $(".youtube").css("display",""); 
             $(".play").text("닫기");
         }
     }
