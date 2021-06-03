@@ -131,9 +131,11 @@
             <br>
             
             <section id="mylist" class="container p-t-40" style="padding-top: 10px; padding-left: 7px;">
+                <h4 id="none" style="color: white;text-align: center;"></h4>
                 <h4 class="romantic-heading">
                     <script>
                         var idx;
+                        var hide = false;
                         $(document).ready(function(){ 
                             $("input[name=search]").keydown(function (key) {
                                 if(key.keyCode == 13){
@@ -148,7 +150,7 @@
                     <tr>
                        <td width=50%>
                             <a href="detail.html">
-                                <img id="img" src="https://movie-phinf.pstatic.net/20201229_146/1609226288425JgdsP_JPEG/movie_image.jpg?type=m665_443_2" alt=""
+                                <img id="img" src="https://movie-phinf.pstatic.net/20201229_146/1609226288425JgdsP_JPEG/movie_image.jpg?type=m665_443_2"  alt="";
                                 class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;">
                                 <div class="color_form" style="height: 15px; margin-bottom: 10px;padding-left: 12px; padding-right: 11px;">
                                     <div class="color" id="color1" style="background: #a293d0;"></div>
@@ -160,7 +162,7 @@
                        <td width=50%>
                             <a href="detail.html">
                                 <img id="img2" src="https://movie-phinf.pstatic.net/20171222_56/1513906341368blx3Q_JPEG/movie_image.jpg" alt=""
-                                class="mylist_img p-r-10 image-size item" style="max-width: 90%;">
+                                class="mylist_img p-r-10 image-size item" style="max-width: 90%;" onclick="storeIdx(4);">
                                 <div class="color_form p-r-10" style="max-width: 90%; height: 15px; margin-bottom: 10px;overflow: hidden;">
                                     <div id="c1" class="color" style="background: #732f6a;"></div>
                                     <div id="c2" class="color" style="background: #543e53;"></div>
@@ -175,7 +177,7 @@
                        <td width=50%>
                             <a href="detail.html">
                                 <img id="img3" src="https://movie-phinf.pstatic.net/20150114_206/1421200132061BpI2D_JPEG/movie_image.jpg" alt=""
-                                class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;">
+                                class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;" onclick="storeIdx(6);">
                                 <div class="color_form" style="height: 15px; margin-bottom: 10px;padding-left: 12px; padding-right: 11px;">
                                     <div id="c4" class="color" style="background: #d2a02d;"></div>
                                     <div id="c5" class="color" style="background: #be8b5e;"></div>
@@ -186,7 +188,7 @@
                        <td width=50%>
                             <a href="detail.html">
                                 <img id="img4" src="https://movie-phinf.pstatic.net/20190712_55/15628945961130s231_JPEG/movie_image.jpg" alt=""
-                                class="mylist_img p-r-10 image-size item" style="max-width: 90%;">
+                                class="mylist_img p-r-10 image-size item" style="max-width: 90%;" onclick="storeIdx(8);">
                                 <div class="color_form p-r-10" style="max-width: 90%; height: 15px; margin-bottom: 10px;overflow: hidden;">
                                     <div id="c7" class="color" style="background: #506429;"></div>
                                     <div id="c8" class="color" style="background: #435024;"></div>
@@ -201,7 +203,7 @@
                        <td width=50%>
                             <a href="detail.html">
                                 <img id="img5" src="https://movie-phinf.pstatic.net/20160219_61/1455872433882gKqgb_JPEG/movie_image.jpg" alt=""
-                                class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;">
+                                class="mylist_img p-r-10 p-l-10 image-size item" style="max-width: 90%;" onclick="storeIdx(13);">
                                 <div class="color_form" style="height: 15px; margin-bottom: 10px;padding-left: 12px; padding-right: 11px;">
                                     <div id="c10" class="color" style="background: #972a3d;"></div>
                                     <div id="c11" class="color" style="background: #000002;"></div>
@@ -212,7 +214,7 @@
                        <td width=50%>
                             <a href="detail.html">
                                 <img id="img6" src="http://t1.daumcdn.net/cfile/2653C44F5285D86E2D" alt=""
-                                class="mylist_img p-r-10 image-size item" style="max-width: 90%;">
+                                class="mylist_img p-r-10 image-size item" style="max-width: 90%;" onclick="storeIdx(12);">
                                 <div class="color_form p-r-10" style="max-width: 90%; height: 15px; margin-bottom: 10px;overflow: hidden;">
                                     <div id="c13" class="color" style="background: #ab1919;"></div>
                                     <div id="c14" class="color" style="background: #d58c8c;"></div>
@@ -250,6 +252,7 @@
     
 <script>
     search = function (){
+        hide=true;
         $("#img2").hide(); // Hide
         $("#img3").hide();
         $("#img4").hide();
@@ -378,10 +381,24 @@
                                 getSearch('26');  
                                 idx=26;
                             }
+                            else{
+                                $("#img").hide();
+                                $("#color1").hide();
+                                $("#color2").hide();
+                                $("#color3").hide();
+                                $('#none').text('검색 결과가 없습니다.');
+                            }
                                 
-                
+                            localStorage.setItem('idx',idx);
                             
                         };
+    function storeIdx(idx){
+        if(hide==false)
+            localStorage.setItem('idx',idx);
+        else
+            localStorage.setItem('idx',2);
+    }
+
 </script>
    
 </body>
