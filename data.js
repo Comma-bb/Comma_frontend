@@ -16,20 +16,8 @@ function parseData(no){
 }
 //초기에 모든 데이터 셋팅..
 function setData(){
-    insertDB(systemDB
-        ,"나의 소녀시대"
-        ,2016
-        ,"멜로/로맨스"
-        ,"프랭키 첸"
-        ,"왕대륙"
-        ,"https://movie-phinf.pstatic.net/20200810_138/1597023139385oXMsi_JPEG/movie_image.jpg?type=m665_443_2"
-        ,"#dde0f3"
-        ,"#a7caf4"
-        ,"#949375"
-        ,"#5d5f47"
-        ,"#efc9b4"
-        ,"https://www.youtube.com/embed/XupP-C_1JLo"
-    );
+    insertDB(systemDB,
+        "너의 이름은.","2017","드라마","신카이 마코토","지창욱|김소현|이레|카미키 류노스케|카미시라이시 모네|타니 카논","https://movie-phinf.pstatic.net/20171222_70/1513920001726sikUX_JPEG/movie_image.jpg?type=f172_234","#df9bb0","#df9bb0","#9b8f9a","#5d6596","#c8b6c3","https://www.youtube.com/embed/enRm-9qF2L8");
 }
 
 function init(){
