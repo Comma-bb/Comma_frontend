@@ -18,7 +18,7 @@ function parseData(no){
 //초기에 모든 데이터 셋팅..
 function setData(){
     insertDB(systemDB,
-        "너의 이름은.","2017","드라마","신카이 마코토","지창욱|김소현|이레|카미키 류노스케|카미시라이시 모네|타니 카논","https://movie-phinf.pstatic.net/20171222_70/1513920001726sikUX_JPEG/movie_image.jpg?type=f172_234","#df9bb0","#df9bb0","#9b8f9a","#5d6596","#c8b6c3","https://www.youtube.com/embed/enRm-9qF2L8");
+        "너의 이름은.","2017","드라마","신카이 마코토","지창욱|김소현|이레|카미키 류노스케|카미시라이시 모네|타니 카논","https://movie-phinf.pstatic.net/20171222_70/1513920001726sikUX_JPEG/movie_image.jpg?type=f172_234","#df9bb0","#886d8c","#9b8f9a","#5d6596","#c8b6c3","https://www.youtube.com/embed/enRm-9qF2L8");
     insertDB(systemDB,
         "라라랜드","2016","드라마","다미엔 차젤레","엠마 스톤|라이언 고슬링","https://movie-phinf.pstatic.net/20201229_146/1609226288425JgdsP_JPEG/movie_image.jpg?type=m665_443_2","#a293d0","#4426a0","#4426a0","#46388d","#46388d","https://www.youtube.com/embed/Dt5hFexM5BI");						
     insertDB(systemDB,
