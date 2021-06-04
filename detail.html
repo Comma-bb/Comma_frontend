@@ -104,6 +104,7 @@
                     }
                     getData(idx);
                 </script>
+                <!-- 영화 제목  -->
                 <h1 id="title" style="text-align: center; font-size: 30px;font-family: 'Noto Sans KR', sans-serif;"></h1>
             </div>
             <div class="movie-poster" style="height: auto; overflow: auto;">
@@ -130,9 +131,16 @@
                 </span>
             </div>
            <div class="castinformation">
-                <p style="line-height: 1.1;" id="director";></p>
-                <p style="line-height: 1.1;" id="actor"></p>
-                <p style="line-height: 1.1;" id="genre"></p>
+                <p style="line-height: 1.1;" ><span class="name">장르:</span>
+                    <span id="genre" style="font-size: 17px; font-weight: 200;"></span>
+                </p>
+                <p style="line-height: 1.1;"><span class="name">감독:</span>
+                    <span id="director" style="font-size: 17px; font-weight: 200;"></span>
+                </p>
+                <p style="line-height: 1.1;"><span class="name">출연:</span>
+                    <span id="actor" style="font-size: 17px; font-weight: 200;"></span>
+                </p>
+
             </div>
         </section>
     </main>

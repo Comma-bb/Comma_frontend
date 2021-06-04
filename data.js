@@ -113,7 +113,7 @@ function createTable(db) {
 function checkDB(db,title){
     isTrue = true;
     var check = "select 1 from movie_board WHERE title = ?";
-    console.log("checkDB 들어옴");
+    // console.log("checkDB 들어옴");
 
     //같은 이름 존재 하는 경우 어떻게 알지 
     db.transaction(function (tx) { 
@@ -121,12 +121,12 @@ function checkDB(db,title){
             dataset = result.rows;
             console.log(dataset);
             if(dataset.length>0){
-                console.log("같은 이름 존재");
+                // console.log("같은 이름 존재"); 
                 // dropTable(db);
                 isTrue = false;
             }
             else{
-                console.log("같은 이름 없음");
+                // console.log("같은 이름 없음");
                 isTrue = true;
             }
         }); 
@@ -162,11 +162,11 @@ function insertDB(db, title, pubDate, genre, director, actor, img, color1, color
 
     setTimeout(function(){
         if(isTrue){
-            console.log("같은 이름 존재하지 않음");
+            // console.log("같은 이름 존재하지 않음");
         }
         else{
-            console.log("같은 이름 존재 하는 경우");
-            console.log("insert  취소");
+            // console.log("같은 이름 존재 하는 경우");
+            // console.log("insert  취소");
             return;
         }
         
@@ -230,7 +230,8 @@ function getData(idx){
                     $('#url').attr('src', item['url']); 
                     //$("#url").src(item['url']);  
                     //$("#img").attr("src",item['img']);            
-                    $("#genre").html(item['genre']);             
+                    $("#genre").html(item['genre']);      
+                    $("#director").html(item['director']);      
                     $("#actor").html(item['actor']);
                     $("#color1").css("background-color",item['color1']);       
                     $("#color2").css("background-color",item['color2']); 
