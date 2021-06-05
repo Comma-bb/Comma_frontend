@@ -125,12 +125,11 @@
             <iframe id="url"class="youtube" style="display: none;" width="100%" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <br>
             <!-- 정보 -->
-            <div class="movierelease">
-                <span class="year">
-                    <h2 id="year"></h2>
-                </span>
-            </div>
-           <div class="castinformation">
+            <div class="castinformation">
+                <h3>영화정보</h3>
+                <p style="line-height: 1.1;" ><span class="name">개봉년도:</span>
+                    <span id="year" style="font-size: 17px; font-weight: 200;"></span>
+                </p>
                 <p style="line-height: 1.1;" ><span class="name">장르:</span>
                     <span id="genre" style="font-size: 17px; font-weight: 200;"></span>
                 </p>
@@ -141,6 +140,10 @@
                     <span id="actor" style="font-size: 17px; font-weight: 200;"></span>
                 </p>
 
+            </div>
+            <div>
+                <h3>줄거리</h3>
+                <p id="content" style="font-size: 17px; font-weight: 200;"></p>
             </div>
         </section>
     </main>
