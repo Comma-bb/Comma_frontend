@@ -330,16 +330,16 @@
         type: "GET",
         async: "false",
         success: function(resp) {
-            // console.log(resp);
-            // console.log("현재온도 : "+ (resp.main.temp- 273.15) );
-            // console.log("현재습도 : "+ resp.main.humidity);
-            // console.log("날씨 : "+ resp.weather[0].main );
-            // console.log("상세날씨설명 : "+ resp.weather[0].description );
-            // console.log("날씨 이미지 : "+ resp.weather[0].icon );
-            // console.log("바람   : "+ resp.wind.speed );
-            // console.log("나라   : "+ resp.sys.country );
-            // console.log("도시이름  : "+ resp.name );
-            // console.log("구름  : "+ (resp.clouds.all) +"%" );
+            console.log(resp);
+            console.log("현재온도 : "+ (resp.main.temp- 273.15) );
+            console.log("현재습도 : "+ resp.main.humidity);
+            console.log("날씨 : "+ resp.weather[0].main );
+            console.log("상세날씨설명 : "+ resp.weather[0].description );
+            console.log("날씨 이미지 : "+ resp.weather[0].icon );
+            console.log("바람   : "+ resp.wind.speed );
+            console.log("나라   : "+ resp.sys.country );
+            console.log("도시이름  : "+ resp.name );
+            console.log("구름  : "+ (resp.clouds.all) +"%" );
             var imgURL = "http://openweathermap.org/img/w/" + resp.weather[0].icon + ".png";
             //$("#weather-icon").attr("src", imgURL);
             if(resp.weather[0].main=="Clouds"){
@@ -363,9 +363,9 @@
                 getCloudy(25,2);
                 getCloudy(26,3);
             }
-            else if(resp.weather[0].main=="Drizzle"){
+            else if(resp.weather[0].main=="Drizzle" || resp.weather[0].main=="Mist" ){
                 $(".weather-icon").text('🌧');
-                $(".weather-recommend").text('비오는 날에는 차분한 색감의 영화 어떠세요?');
+                $(".weather-recommend").text('흐린 날에는 차분한 색감의 영화 어떠세요?');
                 getCloudy(24,1);
                 getCloudy(25,2);
                 getCloudy(26,3);
