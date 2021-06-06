@@ -255,7 +255,10 @@ function getSunny(idx,j){    //맑은날 로맨스 영화 로드
                         item = dataset.item(i); 
                         //$(thumbId).src = item['img'];  
                         document.getElementById(imgId).src = item['img']; 
-                        document.getElementById(titleId).innerHTML = item['title'];             
+                        document.getElementById(titleId).innerHTML = item['title'];  
+                        document.getElementById(imgId).onclick = function(){
+                            localStorage.setItem('idx',idx);
+                        }           
                     }
                 } else {
                     console.log("데이터 리스트 없음");
