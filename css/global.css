@@ -157,13 +157,13 @@ button:focus {
 }
 
 .button{
-    border: var(--border);
+    border: white;
     border-radius: var(--border-radius);
     /* 상하 좌우 */
     padding: 5px 20px;
     /* 글씨 색 */
-    color: var(--link-color) !important;
-    background: var(--button-color);
+    color: black;
+    background: white;
     transition: all .3s;
     cursor: pointer;
     font-size: var(--font-size-18);
