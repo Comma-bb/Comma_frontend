@@ -22,7 +22,7 @@
   </p>
 - 인트로 페이지
   <p>
-    <img src="(https://user-images.githubusercontent.com/57933061/125465916-10d67b30-3988-41fe-8117-71b9a3b4fe52.png" width="200" float = "center">
+    <img src="https://user-images.githubusercontent.com/57933061/125465916-10d67b30-3988-41fe-8117-71b9a3b4fe52.png" width="200" float = "center">
   </p>
 - 홈 페이지
   <p>
