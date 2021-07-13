@@ -18,7 +18,7 @@
 ------
 - 시작 페이지
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/125464337-6551c78c-2b14-4965-91da-8b414e73d8ce.png" width="150" float = "center">
+    <img src="https://user-images.githubusercontent.com/57933061/125465196-dc9fdeec-1e1f-4608-ba9d-f9d5cab2b589.png" width="150" float = "center">
   </p>
 - 인트로 페이지
   <p>
