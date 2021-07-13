@@ -1,4 +1,4 @@
-# Comma_frontend
+# Comma
 색감 및 날씨 기반 영화 추천 모바일 서비스
 
 
