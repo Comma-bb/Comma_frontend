@@ -16,9 +16,25 @@
 ### 🖼 실행화면
 
 ------
-- 정각원 인식 화면
-  <p style="text-align: center;">
-    <img src="https://user-images.githubusercontent.com/57933061/125449581-0c38e895-e8b4-431a-acdc-a3124a0d16af.gif" width="300" float = "center">
+- 시작 페이지
+  <p>
+    <img src="https://user-images.githubusercontent.com/57933061/125463333-dc74a17b-7582-496b-85f1-b442f0c69c85.png" width="300" float = "center">
+  </p>
+- 인트로 페이지
+  <p>
+    <img src="https://user-images.githubusercontent.com/57933061/125463477-160bf558-b0e7-426f-922c-a5ab10394f74.png" width="300" float = "center">
+  </p>
+- 홈 페이지
+  <p>
+    <img src="https://user-images.githubusercontent.com/57933061/125463571-14c64038-f2dd-4d7d-bd3c-17843e9b94ce.png" width="300" float = "center">
+  </p>
+- 검색 페이지
+  <p>
+    <img src="https://user-images.githubusercontent.com/57933061/125463633-85c7fea0-4ec4-4bfa-aaa3-d99e0a9570d6.png" width="300" float = "center">
+  </p>
+- 상세 페이지
+  <p>
+    <img src="https://user-images.githubusercontent.com/57933061/125463764-c3bcd096-a713-44d9-baae-b7dadb4757bb.png" width="300" float = "center">
   </p>
 
 <br>
@@ -57,8 +73,7 @@
 
 ------
 
-https://github.com/minjuu//Comma-bb/Comma_frontend
-
+https://github.com/Comma-bb/Comma_frontend.git
 
 
 
