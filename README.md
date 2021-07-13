@@ -69,7 +69,7 @@
 
 ------
 
-- html / css / javascript 
+- html / css 
 - javascript / jquery
 - Visual Studio Code
 - Cordova / Phonegap
