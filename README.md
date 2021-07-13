@@ -81,7 +81,7 @@
 
 ------
 
-https://github.com/Comma-bb/Comma_frontend.git 
+https://github.com/Comma-bb/Comma_mobile.git
 
 
 
