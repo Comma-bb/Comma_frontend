@@ -62,7 +62,8 @@
 
 ------
 
-- html, css, javascript 
+- html / css / javascript 
+- javascript / jquery
 - Visual Studio Code
 - Cordova / Phonegap
 - Sqlite3
