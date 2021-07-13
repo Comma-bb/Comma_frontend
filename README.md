@@ -18,23 +18,23 @@
 ------
 - 시작 페이지
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/125463333-dc74a17b-7582-496b-85f1-b442f0c69c85.png" width="150" float = "center">
+    <img src="https://user-images.githubusercontent.com/57933061/125464337-6551c78c-2b14-4965-91da-8b414e73d8ce.png" width="150" float = "center">
   </p>
 - 인트로 페이지
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/125463477-160bf558-b0e7-426f-922c-a5ab10394f74.png" width="150" float = "center">
+    <img src="https://user-images.githubusercontent.com/57933061/125464572-0659c7c4-16ef-426b-9ed1-ade22a186603.png" width="150" float = "center">
   </p>
 - 홈 페이지
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/125463571-14c64038-f2dd-4d7d-bd3c-17843e9b94ce.png" width="150" float = "center">
+    <img src="https://user-images.githubusercontent.com/57933061/125464841-ca025b37-d577-4362-ad46-b3e5bba8d513.png" width="150" float = "center">
   </p>
 - 검색 페이지
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/125463633-85c7fea0-4ec4-4bfa-aaa3-d99e0a9570d6.png" width="150" float = "center">
+    <img src="https://user-images.githubusercontent.com/57933061/125465000-7b78f8db-589a-4aa4-a9fe-c3c31d1a47d0.png" width="150" float = "center">
   </p>
 - 상세 페이지
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/125463764-c3bcd096-a713-44d9-baae-b7dadb4757bb.png" width="150" float = "center">
+    <img src="https://user-images.githubusercontent.com/57933061/125465048-9ff876cd-1f32-4793-804d-28499eb8dac8.png" width="150" float = "center">
   </p>
 
 <br>
