@@ -53,7 +53,7 @@
 
 ------
 <p>
-    <img src="https://user-images.githubusercontent.com/57933061/125468040-212634a4-d7ef-4924-9672-460aa32d5f5a.png" width="600" float = "center">
+    <img src="https://user-images.githubusercontent.com/57933061/125468040-212634a4-d7ef-4924-9672-460aa32d5f5a.png" width="700" float = "center">
   </p><br>
   
 ### ⏳ 제작기간
