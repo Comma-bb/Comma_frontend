@@ -52,9 +52,10 @@
 ### 🖨 DB 테이블 구조
 
 ------
-
-![image](https://user-images.githubusercontent.com/57933061/125468040-212634a4-d7ef-4924-9672-460aa32d5f5a.png)
-
+<p>
+    <img src="https://user-images.githubusercontent.com/57933061/125468040-212634a4-d7ef-4924-9672-460aa32d5f5a.png" width="600" float = "center">
+  </p><br>
+  
 ### ⏳ 제작기간
 
 ------
