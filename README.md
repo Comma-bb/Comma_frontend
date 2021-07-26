@@ -84,11 +84,10 @@
 https://github.com/Comma-bb/Comma_mobile.git
 
 
-
 ### 🌏 실행 영상 (클릭 시 이동)
 
 ------
-[![Comma](http://img.youtube.com/dP_CiEk4rVA/0.jpg)](https://www.youtube.com/watch?v=dP_CiEk4rVA) 
+[![Comma]((https://user-images.githubusercontent.com/57933061/127013585-e4863bfc-d44f-4228-a9eb-ac947d20b9e1.JPG)](https://www.youtube.com/watch?v=dP_CiEk4rVA) 
 
 ------
 
