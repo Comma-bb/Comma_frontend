@@ -87,7 +87,7 @@ https://github.com/Comma-bb/Comma_mobile.git
 ### 🌏 실행 영상 (클릭 시 이동)
 
 ------
-[<img src="https://user-images.githubusercontent.com/57933061/127013585-e4863bfc-d44f-4228-a9eb-ac947d20b9e1.JPG" width="600">](https://www.youtube.com/watch?v=dP_CiEk4rVA) 
+[<img src="https://user-images.githubusercontent.com/57933061/127013585-e4863bfc-d44f-4228-a9eb-ac947d20b9e1.JPG" width="500">](https://www.youtube.com/watch?v=dP_CiEk4rVA) 
 
 ------
 
